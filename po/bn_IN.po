@@ -41,7 +41,6 @@ msgstr "সারাদিনব্যাপী পরিবর্তন"
 
 #. To translators: This is a noun, not a verb
 #: ../panels/background/background.ui.h:5
-#| msgid "Lock screen"
 msgid "Lock Screen"
 msgstr "পর্দা লক করুন"
 
@@ -95,7 +94,6 @@ msgstr "রং"
 
 #. translators: No pictures were found
 #: ../panels/background/cc-background-chooser-dialog.c:540
-#| msgid "No input sources found"
 msgid "No Pictures Found"
 msgstr "কোনো ছবি পাওয়া যায়নি"
 
@@ -210,8 +208,7 @@ msgstr "কৌণিক অবস্থানে অাপনার ক্যা
 #: ../panels/color/cc-color-calibrate.c:367
 msgid ""
 "Move your calibration device to the calibrate position and press 'Continue'"
-msgstr ""
-"অাপনার ক্যালিব্রেশন ডিভাইস ক্যালিব্রেশন অবস্থানে সরান এবং 'জারি রাখুন' টিপুন"
+msgstr "অাপনার ক্যালিব্রেশন ডিভাইস ক্যালিব্রেশন অবস্থানে সরান এবং 'জারি রাখুন' টিপুন"
 
 #. TRANSLATORS: Some calibration devices need the user to move a
 #. * dial or switch manually. We also show a picture showing them
@@ -377,7 +374,6 @@ msgstr "স্ক্রীন"
 #. TRANSLATORS: this is when the upload of the profile failed
 #: ../panels/color/cc-color-panel.c:906
 #, c-format
-#| msgid "Failed to apply configuration: %s"
 msgid "Failed to upload file: %s"
 msgstr "ফাইল অাপলোড করা গেল না: %s"
 
@@ -394,8 +390,7 @@ msgstr "এই URLটি লিখে রাখুন।"
 
 #: ../panels/color/cc-color-panel.c:923
 msgid "Restart this computer and boot your normal operating system."
-msgstr ""
-"এই কম্পিউটার রিস্টার্ট করুন এবং অাপনার সাধারণ অপারেটিং সিস্টেম বুট করুন।"
+msgstr "এই কম্পিউটার রিস্টার্ট করুন এবং অাপনার সাধারণ অপারেটিং সিস্টেম বুট করুন।"
 
 #: ../panels/color/cc-color-panel.c:924
 msgid "Type the URL into your browser to download and install the profile."
@@ -422,8 +417,7 @@ msgid ""
 "The measuring instrument is not detected. Please check it is turned on and "
 "correctly connected."
 msgstr ""
-"পরিমাপের সরঞ্জাম সনাক্ত করা হয়নি। দয়া করে এটি যে চালু অাছে এবং সঠিক ভাবে "
-"সংযুক্ত "
+"পরিমাপের সরঞ্জাম সনাক্ত করা হয়নি। দয়া করে এটি যে চালু অাছে এবং সঠিক ভাবে সংযুক্ত "
 "তা দেখে নিন।"
 
 #. TRANSLATORS: this is when the button is insensitive
@@ -553,8 +547,7 @@ msgid ""
 "color profile."
 msgstr ""
 "ক্যালিব্রেশন একটি প্রোফাইল তৈরি করবে যা অাপনি অাপনার স্ক্রীনকে রঙের দিক থেকে "
-"ব্যবস্থাপনা করতে পারবেন। ক্যালিব্রেশনের ক্ষেত্রে অাপনি যত বেশি সময় খরচ "
-"করবেন, রঙ "
+"ব্যবস্থাপনা করতে পারবেন। ক্যালিব্রেশনের ক্ষেত্রে অাপনি যত বেশি সময় খরচ করবেন, রঙ "
 "প্রোফাইলের গুণমান তত উন্নত হবে।"
 
 #: ../panels/color/color.ui.h:3
@@ -578,8 +571,7 @@ msgstr "ক্যালিব্রেশনের গুণমান"
 
 #: ../panels/color/color.ui.h:9
 msgid "Select the sensor device you want to use for calibration."
-msgstr ""
-"ক্যালিব্রেশনের জন্য অাপনি সেন্সর ডিভাইস ব্যবহার করতে চান তা নির্বাচন করুন।"
+msgstr "ক্যালিব্রেশনের জন্য অাপনি সেন্সর ডিভাইস ব্যবহার করতে চান তা নির্বাচন করুন।"
 
 #: ../panels/color/color.ui.h:10
 msgid "Calibration Device"
@@ -598,8 +590,7 @@ msgid ""
 "Select a display target white point. Most displays should be calibrated to a "
 "D65 illuminant."
 msgstr ""
-"একটি প্রদর্শন টার্গেট হোয়াইট পয়েন্ট নির্বাচন করুন। অধিকাংশ প্রদর্শন একটি "
-"D65 "
+"একটি প্রদর্শন টার্গেট হোয়াইট পয়েন্ট নির্বাচন করুন। অধিকাংশ প্রদর্শন একটি D65 "
 "ইলিউমিনেন্টে ক্যালিব্রেট হবে।"
 
 #: ../panels/color/color.ui.h:14
@@ -611,8 +602,7 @@ msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
 msgstr ""
-"দয়া করে প্রদর্শন এমন এক উজ্জ্বলতায় সেট যা অাপনার ক্ষেত্রে উপযুক্ত। "
-"উজ্জ্বলতার এই স্তরে "
+"দয়া করে প্রদর্শন এমন এক উজ্জ্বলতায় সেট যা অাপনার ক্ষেত্রে উপযুক্ত। উজ্জ্বলতার এই স্তরে "
 "রঙ ব্যবস্থাপনা সবথেকে যথাযথ হবে।"
 
 #: ../panels/color/color.ui.h:16
@@ -620,8 +610,7 @@ msgid ""
 "Alternatively, you can use the brightness level used with one of the other "
 "profiles for this device."
 msgstr ""
-"বিকল্প ভাবে, অাপনি এই ডিভাইসের ক্ষেত্রে অন্যান্য প্রোফাইলের একটিতে ব্যবহার "
-"করা "
+"বিকল্প ভাবে, অাপনি এই ডিভাইসের ক্ষেত্রে অন্যান্য প্রোফাইলের একটিতে ব্যবহার করা "
 "উজ্জ্বলতার স্তর ব্যবহার করতে পারবেন।"
 
 #: ../panels/color/color.ui.h:17
@@ -649,7 +638,6 @@ msgid "Profile successfully created!"
 msgstr "প্রোফাইল সফলভাবে তৈরি হয়েছে!"
 
 #: ../panels/color/color.ui.h:22
-#| msgid "Add profile"
 msgid "Copy profile"
 msgstr "প্রোফাইল অনুলিপি করুন"
 
@@ -658,12 +646,10 @@ msgid "Requires writable media"
 msgstr "লিখনযোগ্য মিডিয়ার প্রয়োজন"
 
 #: ../panels/color/color.ui.h:24
-#| msgid "Add profile"
 msgid "Upload profile"
 msgstr "প্রোফাইল অাপলোড করুন"
 
 #: ../panels/color/color.ui.h:25
-#| msgid "Add new connection"
 msgid "Requires Internet connection"
 msgstr "ইন্টারনেট সংযোগের প্রয়োজন"
 
@@ -696,9 +682,7 @@ msgstr ""
 
 #: ../panels/color/color.ui.h:30
 msgid "Each device needs an up to date color profile to be color managed."
-msgstr ""
-"প্রত্যেক ডিভাইসের রঙ ব্যবস্থাপনার ক্ষেত্রে একটি অাপ-টু-ডেট প্রোফাইলের "
-"প্রয়োজন।"
+msgstr "প্রত্যেক ডিভাইসের রঙ ব্যবস্থাপনার ক্ষেত্রে একটি অাপ-টু-ডেট প্রোফাইলের প্রয়োজন।"
 
 #: ../panels/color/color.ui.h:31
 msgid "Learn more"
@@ -840,8 +824,7 @@ msgstr "রঙ"
 #: ../panels/color/gnome-color-panel.desktop.in.in.h:2
 msgid ""
 "Calibrate the color of your devices, such as displays, cameras or printers"
-msgstr ""
-"অাপনার ডিভাইসের রঙ ক্যালিব্রেট করুন, যেমন প্রদর্শন, ক্যামেরা বা প্রিন্টার"
+msgstr "অাপনার ডিভাইসের রঙ ক্যালিব্রেট করুন, যেমন প্রদর্শন, ক্যামেরা বা প্রিন্টার"
 
 #. Translators: those are keywords for the color control-center panel
 #: ../panels/color/gnome-color-panel.desktop.in.in.h:4
@@ -895,7 +878,6 @@ msgstr "সম্পন্ন (_D)"
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #. Translators: This is the full date and time format used in 12-hour mode.
 #: ../panels/datetime/cc-datetime-panel.c:340
-#| msgid "%a %l:%M %p"
 msgid "%e %B %Y, %l:%M %p"
 msgstr "%e %B %Y, %l:%M %p"
 
@@ -928,7 +910,6 @@ msgstr "UTC%:::z"
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #. Translators: This is the time format used in 12-hour mode.
 #: ../panels/datetime/cc-datetime-panel.c:566
-#| msgid "%a %l:%M %p"
 msgid "%l:%M %p"
 msgstr "%l:%M %p"
 
@@ -1010,8 +991,6 @@ msgstr "∶"
 
 # auto translated by TM merge from project: evolution, version: el6, DocId: evolution-2.32
 #: ../panels/datetime/datetime.ui.h:17
-#| msgid "minute"
-#| msgid_plural "minutes"
 msgid "Minute"
 msgstr "মিনিট"
 
@@ -1029,17 +1008,14 @@ msgstr "বছর"
 
 # auto translated by TM merge from project: evolution, version: el6, DocId: evolution-2.32
 #: ../panels/datetime/datetime.ui.h:21
-#| msgid "Time"
 msgid "Time Zone"
 msgstr "সময় জোন"
 
 #: ../panels/datetime/datetime.ui.h:22
-#| msgid "Search for the string"
 msgid "Search for a city"
 msgstr "শহর সন্ধান করুন"
 
 #: ../panels/datetime/datetime.ui.h:23
-#| msgid "Date & Time"
 msgid "Automatic _Date & Time"
 msgstr "স্বয়ংক্রিয় তারিখ & সময় (_D)"
 
@@ -1048,12 +1024,10 @@ msgid "Requires internet access"
 msgstr "ইন্টারনেট অ্যাক্সেসের প্রয়োজন"
 
 #: ../panels/datetime/datetime.ui.h:25
-#| msgid "Automatic _Connect"
 msgid "Automatic Time _Zone"
 msgstr "স্বয়ংক্রিয় সময় জোন (_Z)"
 
 #: ../panels/datetime/datetime.ui.h:26
-#| msgid "Date & Time"
 msgid "Date & _Time"
 msgstr "তারিখ & সময় (_T)"
 
@@ -1062,7 +1036,6 @@ msgid "Time _Zone"
 msgstr "সময় জোন (_Z)"
 
 #: ../panels/datetime/datetime.ui.h:28
-#| msgid "Formats"
 msgid "Time _Format"
 msgstr "সময় ফর্ম্যাট (_F)"
 
@@ -1092,19 +1065,16 @@ msgid "To change time or date settings, you need to authenticate."
 msgstr "সময় বা তারিখ সেটিং পরিবর্তন করতে, অাপনার প্রমাণীকরণের প্রয়োজন।"
 
 #: ../panels/display/cc-display-panel.c:487
-#| msgid "Close"
 msgid "Lid Closed"
 msgstr "লিড বন্ধ"
 
 #. translators: "Mirrored" describes when both displays show the same view
 #: ../panels/display/cc-display-panel.c:490
-#| msgid "Mirrored Displays"
 msgid "Mirrored"
 msgstr "প্রতিফলিত"
 
 #: ../panels/display/cc-display-panel.c:492
 #: ../panels/display/cc-display-panel.c:2145
-#| msgid "Primary _button"
 msgid "Primary"
 msgstr "প্রাথমিক"
 
@@ -1122,12 +1092,10 @@ msgid "Off"
 msgstr "বন্ধ"
 
 #: ../panels/display/cc-display-panel.c:497
-#| msgid "Secondary click delay"
 msgid "Secondary"
 msgstr "অপ্রধান"
 
 #: ../panels/display/cc-display-panel.c:1533
-#| msgid "Mirrored Displays"
 msgid "Arrange Combined Displays"
 msgstr "একত্রিত প্রদর্শন সাজান"
 
@@ -1161,18 +1129,15 @@ msgid "Show the top bar and Activities Overview on this display"
 msgstr "এই প্রদর্শনে শীর্ষ দন্ড এবং ক্রিয়াকলাপ পূর্বরূপ দেখান "
 
 #: ../panels/display/cc-display-panel.c:2152
-#| msgid "Secondary click delay"
 msgid "Secondary Display"
 msgstr "অপ্রধান প্রদর্শন"
 
 #: ../panels/display/cc-display-panel.c:2153
 msgid "Join this display with another to create an extra workspace"
-msgstr ""
-"একটি অতিরিক্ত ওয়ার্কস্পেস তৈরি করতে এই প্রদর্শন অপর একটির সংগে যুক্ত করুন"
+msgstr "একটি অতিরিক্ত ওয়ার্কস্পেস তৈরি করতে এই প্রদর্শন অপর একটির সংগে যুক্ত করুন"
 
 # auto translated by TM merge from project: gnome-settings-daemon, version: 3.8.4, DocId: gnome-settings-daemon
 #: ../panels/display/cc-display-panel.c:2160
-#| msgid "Orientation"
 msgid "Presentation"
 msgstr "সজ্জা"
 
@@ -1190,12 +1155,10 @@ msgid "Show your existing view on both displays"
 msgstr "উভয় প্রদর্শনেই অাপনার বিদ্যমান রূপ দেখান"
 
 #: ../panels/display/cc-display-panel.c:2173
-#| msgid "_Turn On"
 msgid "Turn Off"
 msgstr "বন্ধ করুন"
 
 #: ../panels/display/cc-display-panel.c:2174
-#| msgid "Panel to display"
 msgid "Don't use this display"
 msgstr "এই প্রদর্শন ব্যবহার করবেন না"
 
@@ -1205,7 +1168,6 @@ msgid "Could not get screen information"
 msgstr "পর্দা সংক্রান্ত পরিবর্তন প্রাপ্ত করতে ব্যর্থ"
 
 #: ../panels/display/cc-display-panel.c:2414
-#| msgid "Mirrored Displays"
 msgid "_Arrange Combined Displays"
 msgstr "একত্রিত প্রদর্শন সাজান (_A)"
 
@@ -1220,7 +1182,6 @@ msgstr "সংযুক্ত মনিটর এবং প্রোজেক্
 
 #. Translators: those are keywords for the display control-center panel
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:4
-#| msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;"
 msgstr "প্যানেল;প্রোজেক্টর;xrandr;স্ক্রিন;রিজোলিউশন;সতেজ;মনিটর;"
 
@@ -1236,7 +1197,6 @@ msgstr "অজানা"
 
 #: ../panels/info/cc-info-panel.c:472
 #, c-format
-#| msgid "%d-bit"
 msgid "%s %d-bit"
 msgstr "%s %d-বিট"
 
@@ -1272,13 +1232,11 @@ msgstr "ভিডিও DVD'র জন্য একটি অ্যাপ্ল�
 #: ../panels/info/cc-info-panel.c:1286
 msgid "Select an application to run when a music player is connected"
 msgstr ""
-"একটি মিউজিক প্লেয়ার সংযুক্ত অবস্থায় চালানোর জন্য একটি অ্যাপ্লিকেশন নির্বাচন "
-"করুন"
+"একটি মিউজিক প্লেয়ার সংযুক্ত অবস্থায় চালানোর জন্য একটি অ্যাপ্লিকেশন নির্বাচন করুন"
 
 #: ../panels/info/cc-info-panel.c:1287
 msgid "Select an application to run when a camera is connected"
-msgstr ""
-"একটি ক্যামেরা সংযুক্ত অবস্থায় চালানোর জন্য একটি অ্যাপ্লিকেশন নির্বাচন করুন"
+msgstr "একটি ক্যামেরা সংযুক্ত অবস্থায় চালানোর জন্য একটি অ্যাপ্লিকেশন নির্বাচন করুন"
 
 #: ../panels/info/cc-info-panel.c:1288
 msgid "Select an application for software CDs"
@@ -1379,8 +1337,7 @@ msgid ""
 "device;system;information;memory;processor;version;default;application;"
 "preferred;cd;dvd;usb;audio;video;disc;removable;media;autorun;"
 msgstr ""
-"ডিভাইস;সিস্টেম;তথ্য;মেমরি;প্রসেসর;সংস্করণ;ডিফল্ট;অ্যাপ্লিকেশন;পছন্দসই;cd;dvd;u"
-"sb;"
+"ডিভাইস;সিস্টেম;তথ্য;মেমরি;প্রসেসর;সংস্করণ;ডিফল্ট;অ্যাপ্লিকেশন;পছন্দসই;cd;dvd;usb;"
 "অডিও;ভিডিও;ডিস্ক;অপসারণযোগ্য;মিডিয়া;স্বয়ংক্রিয় চালনা;"
 
 #: ../panels/info/info.ui.h:1
@@ -1409,7 +1366,6 @@ msgstr "প্রসেসর"
 
 #. To translators: this field contains the distro name, version and type
 #: ../panels/info/info.ui.h:8
-#| msgid "Open System"
 msgid "Base system"
 msgstr "বেস সিস্টেম"
 
@@ -1430,7 +1386,6 @@ msgid "Virtualization"
 msgstr "ভার্চুয়ালাইজেশন"
 
 #: ../panels/info/info.ui.h:13
-#| msgid "Checking for Updates"
 msgid "Check for updates"
 msgstr "আপডেট অাছে কিনা দেখুন"
 
@@ -1484,8 +1439,7 @@ msgstr "অন্যান্য মিডিয়া (_O)…"
 
 #: ../panels/info/info.ui.h:28
 msgid "_Never prompt or start programs on media insertion"
-msgstr ""
-"মিডিয়া সন্নিবেশের সময়ে কখনও সূচনা দেবেন না বা প্রোগ্রাম শুরু করবেন না (_N)"
+msgstr "মিডিয়া সন্নিবেশের সময়ে কখনও সূচনা দেবেন না বা প্রোগ্রাম শুরু করবেন না (_N)"
 
 #: ../panels/keyboard/00-multimedia.xml.in.h:1
 msgid "Sound and Media"
@@ -1705,8 +1659,7 @@ msgstr "কি-বোর্ড"
 #: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:2
 msgid "View and change keyboard shortcuts and set your typing preferences"
 msgstr ""
-"কীবোর্ড শর্টকাটগুলি দেখুন এবং পরিবর্তন করুন এবং অাপনার টাইপিং অগ্রাধিকার সেট "
-"করুন"
+"কীবোর্ড শর্টকাটগুলি দেখুন এবং পরিবর্তন করুন এবং অাপনার টাইপিং অগ্রাধিকার সেট করুন"
 
 #. Translators: those are keywords for the keyboard control-center panel
 #: ../panels/keyboard/gnome-keyboard-panel.desktop.in.in.h:4
@@ -1818,8 +1771,7 @@ msgid ""
 "To edit a shortcut, click the row and hold down the new keys or press "
 "Backspace to clear."
 msgstr ""
-"একটি শর্টকাট সম্পাদন করতে, সারিতে ক্লিক করুন এবং সাফ করতে নতুন কী ধরে থাকুন "
-"বা "
+"একটি শর্টকাট সম্পাদন করতে, সারিতে ক্লিক করুন এবং সাফ করতে নতুন কী ধরে থাকুন বা "
 "Backspace টিপুন।"
 
 #: ../panels/keyboard/gnome-keyboard-panel.ui.h:24
@@ -1845,8 +1797,7 @@ msgid ""
 "using this key.\n"
 "Please try with a key such as Control, Alt or Shift at the same time."
 msgstr ""
-"শর্টকাট-কি হিসেবে \"%s\" ব্যবহার করা যাবে না কারণ এর ফলে এই কি ব্যবহার করে "
-"কিছু "
+"শর্টকাট-কি হিসেবে \"%s\" ব্যবহার করা যাবে না কারণ এর ফলে এই কি ব্যবহার করে কিছু "
 "টাইপ করা যাবে না।\n"
 "অনুগ্রহ করে Control, Alt অথবা Shift কি-র একত্রিত ব্যবহারের প্রচেষ্টা করুন।"
 
@@ -1879,25 +1830,20 @@ msgid ""
 "automatically set it to \"%s\"?"
 msgstr ""
 "\"%s\" শর্টকাটের সংগে একটি \"%s\" শর্টকাট সংযুক্ত রয়েছে। অাপনি কি এটি "
-"স্বয়ংক্রিয়ভাবে "
-"\"%s\" এ সেট করতে চান?"
+"স্বয়ংক্রিয়ভাবে \"%s\" এ সেট করতে চান?"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/keyboard/keyboard-shortcuts.c:1435
 #, c-format
-#| msgid ""
-#| "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be "
-#| "disabled."
 msgid ""
 "\"%s\" is currently associated with \"%s\", this shortcut will be disabled "
 "if you move forward."
 msgstr ""
-"বর্তমানে \"%s\" \"%s\"-এর সংগে সংশ্লিষ্ট, অাপনি এগিয়ে গেলে এই শর্টকাট "
-"নিষ্ক্রিয় হবে।"
+"বর্তমানে \"%s\" \"%s\"-এর সংগে সংশ্লিষ্ট, অাপনি এগিয়ে গেলে এই শর্টকাট নিষ্ক্রিয় "
+"হবে।"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/keyboard/keyboard-shortcuts.c:1441
-#| msgid "_Reassign"
 msgid "_Assign"
 msgstr "নিয়োগ (_A)"
 
@@ -1906,7 +1852,6 @@ msgid "Test Your _Settings"
 msgstr "অাপনার সেটিং পরীক্ষা করুন (_S)"
 
 #: ../panels/mouse/cc-mouse-panel.c:107
-#| msgid "Test Your _Settings"
 msgid "Test Your Settings"
 msgstr "অাপনার সেটিং পরীক্ষা করুন"
 
@@ -1923,10 +1868,8 @@ msgstr ""
 
 #. Translators: those are keywords for the mouse and touchpad control-center panel
 #: ../panels/mouse/gnome-mouse-panel.desktop.in.in.h:4
-#| msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;"
 msgid "Trackpad;Pointer;Click;Tap;Double;Button;Trackball;Scroll;"
-msgstr ""
-"ট্র্যাকপ্যাড;পয়েন্টার;ক্লিক;অালতো চাপুন;দ্বৈত;বোতাম;ট্র্যাকবল;স্ক্রোল;"
+msgstr "ট্র্যাকপ্যাড;পয়েন্টার;ক্লিক;অালতো চাপুন;দ্বৈত;বোতাম;ট্র্যাকবল;স্ক্রোল;"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/mouse/gnome-mouse-properties.ui.h:1
@@ -1934,8 +1877,6 @@ msgid "General"
 msgstr "সাধারণ"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:2
-#| msgctxt "keyboard, speed"
-#| msgid "Slow"
 msgctxt "double click, speed"
 msgid "Slow"
 msgstr "মন্থর"
@@ -1945,8 +1886,6 @@ msgid "Double-click timeout"
 msgstr "দুইবার ক্লিকের সময় সমাপ্ত"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:4
-#| msgctxt "keyboard, speed"
-#| msgid "Fast"
 msgctxt "double click, speed"
 msgid "Fast"
 msgstr "দ্রুত"
@@ -1979,15 +1918,11 @@ msgid "_Pointer speed"
 msgstr "পয়েন্টার গতি (_P)"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:11
-#| msgctxt "keyboard, speed"
-#| msgid "Slow"
 msgctxt "mouse pointer, speed"
 msgid "Slow"
 msgstr "মন্থর"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:12
-#| msgctxt "keyboard, speed"
-#| msgid "Fast"
 msgctxt "mouse pointer, speed"
 msgid "Fast"
 msgstr "দ্রুত"
@@ -1998,15 +1933,11 @@ msgid "Touchpad"
 msgstr "টাচ-প্যাড"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:14
-#| msgctxt "keyboard, speed"
-#| msgid "Slow"
 msgctxt "touchpad pointer, speed"
 msgid "Slow"
 msgstr "মন্থর"
 
 #: ../panels/mouse/gnome-mouse-properties.ui.h:15
-#| msgctxt "keyboard, speed"
-#| msgid "Fast"
 msgctxt "touchpad pointer, speed"
 msgid "Fast"
 msgstr "দ্রুত"
@@ -2490,7 +2421,6 @@ msgstr "ফায়ারওয়্যাল জোন (_Z)"
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/network/connection-editor/firewall-helpers.c:48
 #: ../panels/network/connection-editor/firewall-helpers.c:112
-#| msgid "Default"
 msgctxt "Firewall zone"
 msgid "Default"
 msgstr "ডিফল্ট"
@@ -2600,8 +2530,7 @@ msgid ""
 "Reset the settings for this network, including passwords, but remember it as "
 "a preferred network"
 msgstr ""
-"পাসওয়ার্ড সমেত এই নেটওয়ার্কের জন্য সেটিং পুনঃসেট করুন, কিন্তু এটিকে পছন্দের "
-"নেটওয়ার্ক "
+"পাসওয়ার্ড সমেত এই নেটওয়ার্কের জন্য সেটিং পুনঃসেট করুন, কিন্তু এটিকে পছন্দের নেটওয়ার্ক "
 "হিসাবে মনে রাখুন"
 
 #: ../panels/network/connection-editor/reset-page.ui.h:4
@@ -2609,8 +2538,7 @@ msgid ""
 "Remove all details relating to this network and do not try to automatically "
 "connect"
 msgstr ""
-"এই নেটওয়ার্কের সংগে সংশিষ্ট সমস্ত বিস্তারিত সরান এবং স্বয়ংক্রিয় ভাবে সংযোগ "
-"করার "
+"এই নেটওয়ার্কের সংগে সংশিষ্ট সমস্ত বিস্তারিত সরান এবং স্বয়ংক্রিয় ভাবে সংযোগ করার "
 "চেষ্টা করুন"
 
 #: ../panels/network/connection-editor/security-page.ui.h:1
@@ -2676,7 +2604,6 @@ msgstr ""
 "ত্রুটি: %s।"
 
 #: ../panels/network/connection-editor/vpn-helpers.c:371
-#| msgid "Export VPN connection..."
 msgid "Export VPN connection"
 msgstr "VPN সংযোগ রপ্তানি করুন"
 
@@ -2715,14 +2642,12 @@ msgstr "ইন্টারনেটের সংগে অাপনার সং
 
 #. Translators: those are keywords for the network control-center panel
 #: ../panels/network/gnome-network-panel.desktop.in.in.h:4
-#| msgid ""
-#| "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;"
 msgid ""
 "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;"
 "vlan;bridge;bond;DNS;"
 msgstr ""
-"নেটওয়ার্ক;বেতার;Wi-Fi;Wifi;IP;LAN;প্রক্সি;WAN;ব্রডব্যান্ড;মোডেম;ব্লুটুথ;vpn;"
-"vlan;ব্রিজ;বন্ড;DNS;"
+"নেটওয়ার্ক;বেতার;Wi-Fi;Wifi;IP;LAN;প্রক্সি;WAN;ব্রডব্যান্ড;মোডেম;ব্লুটুথ;vpn;vlan;ব্রিজ;"
+"বন্ড;DNS;"
 
 #: ../panels/network/net-device-bond.c:77
 msgid "Bond slaves"
@@ -2800,7 +2725,6 @@ msgid "Add new connection"
 msgstr "নতুন সংযোগ যোগ করুন"
 
 #: ../panels/network/net-device-team.c:77
-#| msgid "Bridge slaves"
 msgid "Team slaves"
 msgstr "টিম স্লেভস"
 
@@ -2809,8 +2733,7 @@ msgid ""
 "If you have a connection to the Internet other than wireless, you can set up "
 "a wireless hotspot to share the connection with others."
 msgstr ""
-"বেতার সংযোগ ছাড়া ইন্টারনেটের সংগে অাপনার অন্য কোনো ধরনের সংযোগ থাকলে, "
-"অন্যদের "
+"বেতার সংযোগ ছাড়া ইন্টারনেটের সংগে অাপনার অন্য কোনো ধরনের সংযোগ থাকলে, অন্যদের "
 "সংগে সংযোগ ভাগ করতে অাপনি একটি বেতার হটস্পট সেট অাপ করতে পারবেন।"
 
 #: ../panels/network/net-device-wifi.c:1155
@@ -2823,8 +2746,7 @@ msgid ""
 "It is not possible to access the Internet through your wireless while the "
 "hotspot is active."
 msgstr ""
-"হটস্পট সক্রিয় থাকার সময়ে অাপনার বেতার মারফত ইন্টারনেট অ্যাক্সেস করা সম্ভব "
-"নয়।"
+"হটস্পট সক্রিয় থাকার সময়ে অাপনার বেতার মারফত ইন্টারনেট অ্যাক্সেস করা সম্ভব নয়।"
 
 #: ../panels/network/net-device-wifi.c:1242
 msgid "Stop hotspot and disconnect any users?"
@@ -2847,8 +2769,7 @@ msgid ""
 "Network details for the selected networks, including passwords and any "
 "custom configuration will be lost."
 msgstr ""
-"পাসওয়ার্ড সমেত নির্বাচিত নেটওয়ার্কগুলির নেটওয়ার্ক বিস্তারিত এবং যেকোনো "
-"কাস্টম "
+"পাসওয়ার্ড সমেত নির্বাচিত নেটওয়ার্কগুলির নেটওয়ার্ক বিস্তারিত এবং যেকোনো কাস্টম "
 "কনফিগারেশন হারিয়ে যাবে।"
 
 #: ../panels/network/net-device-wifi.c:1742
@@ -2874,8 +2795,7 @@ msgstr "মুছে ফেলা হবে (_F)"
 msgid ""
 "Web Proxy Autodiscovery is used when a Configuration URL is not provided."
 msgstr ""
-"কনফিগারেশন URL সরবরাহ করা না হলে ওয়েব প্রক্সি স্বয়ংক্রিয়-ডিসকভারি ব্যবহার "
-"করা হয়।"
+"কনফিগারেশন URL সরবরাহ করা না হলে ওয়েব প্রক্সি স্বয়ংক্রিয়-ডিসকভারি ব্যবহার করা হয়।"
 
 #. TRANSLATORS: WPAD is bad: if you enable it on an untrusted
 #. * network, then anyone else on that network can tell your
@@ -3086,16 +3006,14 @@ msgid ""
 "Reset the settings for this connection to their defaults, but remember as a "
 "preferred connection."
 msgstr ""
-"এই সংযোগের সেটিংস তাদের ডিফল্টে পুনঃসেট করুন কিন্তু পছন্দের সংযোগ হিসাবে মনে "
-"রাখুন।"
+"এই সংযোগের সেটিংস তাদের ডিফল্টে পুনঃসেট করুন কিন্তু পছন্দের সংযোগ হিসাবে মনে রাখুন।"
 
 #: ../panels/network/network-wifi.ui.h:42
 msgid ""
 "Remove all details relating to this network and do not try to automatically "
 "connect to it."
 msgstr ""
-"এই নেটওয়ার্কের সংগে সংশিষ্ট সমস্ত বিস্তারিত সরান এবং এতে স্বয়ংক্রিয় ভাবে "
-"সংযোগ "
+"এই নেটওয়ার্কের সংগে সংশিষ্ট সমস্ত বিস্তারিত সরান এবং এতে স্বয়ংক্রিয় ভাবে সংযোগ "
 "করার চেষ্টা করবেন না।"
 
 #: ../panels/network/network-wifi.ui.h:43
@@ -3486,10 +3404,8 @@ msgid ""
 "to insecure, rogue Wi-Fi networks.  Would you like to choose a Certificate "
 "Authority certificate?"
 msgstr ""
-"শংসাপত্র কর্তৃপক্ষ (CA) শংসাপত্র ব্যবহার না করার ফলে সংযোগ অনিরাপদ হয়ে যেতে "
-"পারে, "
-"Wi-Fi নেটওয়ার্ক বিপজ্জনক হতে পারে। অাপনি কি একটি শংসাপত্র কর্তৃপক্ষ শংসাপত্র "
-"বাছতে "
+"শংসাপত্র কর্তৃপক্ষ (CA) শংসাপত্র ব্যবহার না করার ফলে সংযোগ অনিরাপদ হয়ে যেতে পারে, "
+"Wi-Fi নেটওয়ার্ক বিপজ্জনক হতে পারে। অাপনি কি একটি শংসাপত্র কর্তৃপক্ষ শংসাপত্র বাছতে "
 "চান?"
 
 # auto translated by TM merge from project: authconfig, version: 6.1.12-8, DocId: authconfig
@@ -3521,7 +3437,6 @@ msgid "MSCHAPv2"
 msgstr "MSCHAPv2"
 
 #: ../panels/network/wireless-security/eap-method-fast.c:409
-#| msgid "Choose a PAC file..."
 msgid "Choose a PAC file"
 msgstr "একটি PAC ফাইল বাছুন"
 
@@ -3592,7 +3507,6 @@ msgstr "MD5"
 #: ../panels/network/wireless-security/eap-method-peap.c:350
 #: ../panels/network/wireless-security/eap-method-tls.c:456
 #: ../panels/network/wireless-security/eap-method-ttls.c:350
-#| msgid "Choose a Certificate Authority certificate..."
 msgid "Choose a Certificate Authority certificate"
 msgstr "একটি শংসাপত্র কর্তৃপক্ষ শংসাপত্র বাছুন"
 
@@ -3631,21 +3545,17 @@ msgid ""
 "\n"
 "(You can password-protect your private key with openssl)"
 msgstr ""
-"নির্বাচিত ব্যক্তিগত কী একটি পাসওয়ার্ড দ্বারা সুরক্ষিত বলে মনে হচ্ছে না।  এর "
-"কারণে "
-"অাপনার নিরাপত্তা শংসাপত্রের অপব্যবহার হওয়ার পরিস্থিতি তৈরি হতে পারে।  দয়া "
-"করে "
+"নির্বাচিত ব্যক্তিগত কী একটি পাসওয়ার্ড দ্বারা সুরক্ষিত বলে মনে হচ্ছে না।  এর কারণে "
+"অাপনার নিরাপত্তা শংসাপত্রের অপব্যবহার হওয়ার পরিস্থিতি তৈরি হতে পারে।  দয়া করে "
 "একটি পাসওয়ার্ড সুরক্ষিত ব্যক্তিগত কী নির্বাচন করুন।\n"
 "\n"
 "(অাপনি openssl দিয়ে অাপনার ব্যক্তিগত কী পাসওয়ার্ড সুরক্ষিত করতে পারবেন)"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:450
-#| msgid "Choose your personal certificate..."
 msgid "Choose your personal certificate"
 msgstr "অাপনার ব্যক্তিগত শংসাপত্র বাছুন"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:462
-#| msgid "Choose your private key..."
 msgid "Choose your private key"
 msgstr "অাপনার ব্যক্তিগত কী বাছুন"
 
@@ -3825,7 +3735,6 @@ msgstr "লক স্ক্রীনে দেখান"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/online-accounts/cc-online-accounts-add-account-dialog.c:169
-#| msgid "Other"
 msgctxt "Online Account"
 msgid "Other"
 msgstr "অন্যান্য"
@@ -3910,15 +3819,11 @@ msgstr ""
 
 #. For ReadItLater and Pocket, see http://en.wikipedia.org/wiki/Pocket_(application)
 #: ../panels/online-accounts/gnome-online-accounts-panel.desktop.in.in.h:4
-#| msgid ""
-#| "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;"
-#| "ownCloud;"
 msgid ""
 "Google;Facebook;Twitter;Yahoo;Web;Online;Chat;Calendar;Mail;Contact;ownCloud;"
 "Kerberos;IMAP;SMTP;Pocket;ReadItLater;"
 msgstr ""
-"Google;Facebook;Twitter;Yahoo;Web;অনলাইন;চ্যাট;ক্যালেন্ডার;মেল;পরিচিতি;ownClou"
-"d;"
+"Google;Facebook;Twitter;Yahoo;Web;অনলাইন;চ্যাট;ক্যালেন্ডার;মেল;পরিচিতি;ownCloud;"
 "Kerberos;IMAP;SMTP;পকেট;ReadItLater;"
 
 #: ../panels/online-accounts/online-accounts.ui.h:1
@@ -3939,8 +3844,7 @@ msgid ""
 "Adding an account allows your applications to access it for documents, mail, "
 "contacts, calendar, chat and more."
 msgstr ""
-"একটি অ্যাকাউন্ট যোগ করলে অাপনার অ্যাপ্লিকেশনগুলি তা নথি, মেল, পরিচিতি, "
-"বর্ষপঞ্জি, "
+"একটি অ্যাকাউন্ট যোগ করলে অাপনার অ্যাপ্লিকেশনগুলি তা নথি, মেল, পরিচিতি, বর্ষপঞ্জি, "
 "চ্যাট এবং অারো অনেক কিছুর জন্য অ্যাক্সেস করতে পারবে।"
 
 # auto translated by TM merge from project: gnome-settings-daemon, version: 3.8.4, DocId: gnome-settings-daemon
@@ -4141,22 +4045,18 @@ msgid "Power Saving"
 msgstr "বিদ্যুতের সংরক্ষণ"
 
 #: ../panels/power/cc-power-panel.c:1473
-#| msgid "_Screen Brightness"
 msgid "_Screen brightness"
 msgstr "স্ক্রীন উজ্জ্বলতা (_S)"
 
 #: ../panels/power/cc-power-panel.c:1479
-#| msgid "Keyboard Settings"
 msgid "_Keyboard brightness"
 msgstr "কীবোর্ড উজ্জ্বলতা (_K)"
 
 #: ../panels/power/cc-power-panel.c:1489
-#| msgid "_Dim Screen when Inactive"
 msgid "_Dim screen when inactive"
 msgstr "নিষ্ক্রিয় অবস্থায় অাবছা স্ক্রীন (_D)"
 
 #: ../panels/power/cc-power-panel.c:1514
-#| msgid "_Blank Screen"
 msgid "_Blank screen"
 msgstr "খালি স্ক্রীন (_B)"
 
@@ -4169,12 +4069,10 @@ msgid "Turns off wireless devices"
 msgstr "বেতার ডিভাইসগুলি বন্ধ করে"
 
 #: ../panels/power/cc-power-panel.c:1581
-#| msgid "_Mobile Broadband"
 msgid "_Mobile broadband"
 msgstr "মোবাইল ব্রড-ব্যান্ড (_M)"
 
 #: ../panels/power/cc-power-panel.c:1586
-#| msgid "Turns off Mobile Broadband (3G, 4G, WiMax, etc.) devices"
 msgid "Turns off mobile broadband (3G, 4G, WiMax, etc.) devices"
 msgstr "মোবাইল ব্রডব্যান্ড (3G, 4G, WiMax, ইত্যাদি) ডিভাইসগুলি বন্ধ করে"
 
@@ -4195,12 +4093,10 @@ msgid "Suspend & Power Off"
 msgstr "বিলম্বিত & পাওয়ার বন্ধ করুন"
 
 #: ../panels/power/cc-power-panel.c:1851
-#| msgid "_Automatic Suspend"
 msgid "_Automatic suspend"
 msgstr "স্বয়ংক্রিয় বিলম্ব (_A)"
 
 #: ../panels/power/cc-power-panel.c:1875
-#| msgid "When Battery Power is _Critical"
 msgid "When battery power is _critical"
 msgstr "যখন ব্যাটারি পাওয়ার খুবই কম (_C)"
 
@@ -4228,8 +4124,7 @@ msgstr "অাপনার ব্যাটারির স্থিতি দে
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 msgstr ""
-"পাওয়ার;ঘুমন্ত;বিলম্ব;হাইবারনেট;ব্যাটারি;উজ্জ্বলতা;অন্ধকারময়;খালি;মনিটর;DPMS;"
-"নিশ্চল;"
+"পাওয়ার;ঘুমন্ত;বিলম্ব;হাইবারনেট;ব্যাটারি;উজ্জ্বলতা;অন্ধকারময়;খালি;মনিটর;DPMS;নিশ্চল;"
 
 # auto translated by TM merge from project: gnome-shell-extensions, version: 3.8.3, DocId: gnome-shell-extensions
 #: ../panels/power/power.ui.h:1
@@ -4530,8 +4425,7 @@ msgstr "প্রিন্টার"
 #: ../panels/printers/gnome-printers-panel.desktop.in.in.h:2
 msgid "Add printers, view printer jobs and decide how you want to print"
 msgstr ""
-"প্রিন্টারগুলি যোগ করুন, প্রিন্টার সংক্রান্ত কাজ দেখুন এবং অাপনি কীভাবে "
-"প্রিন্ট করতে চান "
+"প্রিন্টারগুলি যোগ করুন, প্রিন্টার সংক্রান্ত কাজ দেখুন এবং অাপনি কীভাবে প্রিন্ট করতে চান "
 "তা স্থির করুন"
 
 #. Translators: those are keywords for the printing control-center panel
@@ -4568,7 +4462,6 @@ msgstr "একটি নতুন প্রিন্টার যোগ কর�
 # auto translated by TM merge from project: polkit-gnome, version: 0.105, DocId: polkit-gnome-1
 #. Translators: This button opens authentication dialog for selected server.
 #: ../panels/printers/new-printer-dialog.ui.h:5
-#| msgid "Authenticate"
 msgid "A_uthenticate"
 msgstr "অনুমোদন (_u)"
 
@@ -4579,7 +4472,6 @@ msgstr "কোনো প্রিন্টার সনাক্ত করা �
 
 #. Translators: The entered text should contain network address of a printer or a text which will filter found devices (their names and locations)
 #: ../panels/printers/new-printer-dialog.ui.h:9
-#| msgid "Search for network printers or filter result"
 msgid "Enter address of a printer or a text to filter results"
 msgstr "ফলাফল বাছাই করতে একটি প্রিন্টারের ঠিকানা বা একটি পাঠ্য লিখুন"
 
@@ -4597,13 +4489,11 @@ msgstr "ড্রাইভার ডেটাবেস লোড হচ্ছে
 
 #. Translators: The found device is a JetDirect printer
 #: ../panels/printers/pp-host.c:506
-#| msgid "Remove Printer"
 msgid "JetDirect Printer"
 msgstr "JetDirect প্রিন্টার"
 
 #. Translators: The found device is a Line Printer Daemon printer
 #: ../panels/printers/pp-host.c:756
-#| msgid "%s Printer"
 msgid "LPD Printer"
 msgstr "LPD প্রিন্টার"
 
@@ -4741,7 +4631,6 @@ msgstr "সমান্তরাল পোর্ট"
 #. Translators: Location of found network printer (e.g. Kitchen, Reception)
 #: ../panels/printers/pp-new-printer-dialog.c:1739
 #, c-format
-#| msgid "Location"
 msgid "Location: %s"
 msgstr "অবস্থান: %s"
 
@@ -4749,13 +4638,11 @@ msgstr "অবস্থান: %s"
 #. Translators: Network address of found printer
 #: ../panels/printers/pp-new-printer-dialog.c:1744
 #, c-format
-#| msgid "Address"
 msgid "Address: %s"
 msgstr "ঠিকানা: %s"
 
 #. Translators: This item is a server which needs authentication to show its printers
 #: ../panels/printers/pp-new-printer-dialog.c:1768
-#| msgid "_Inner authentication"
 msgid "Server requires authentication"
 msgstr "সার্ভারের প্রমাণীকরণের প্রয়োজন"
 
@@ -4913,8 +4800,7 @@ msgstr "ড্রাইভার"
 #: ../panels/printers/pp-samba.c:248
 #, c-format
 msgid "Enter your username and password to view printers available on %s."
-msgstr ""
-"%s এ উপলব্ধ প্রিন্টারগুলি দেখতে অাপনার ব্যবহারকারী নাম এবং পাসওয়ার্ড দিন।"
+msgstr "%s এ উপলব্ধ প্রিন্টারগুলি দেখতে অাপনার ব্যবহারকারী নাম এবং পাসওয়ার্ড দিন।"
 
 #: ../panels/printers/printers.ui.h:1
 msgid "Add Printer"
@@ -4937,7 +4823,6 @@ msgstr "অবস্থান"
 
 #. Translators: This checkbox is checked when the default printer is selected.
 #: ../panels/printers/printers.ui.h:8
-#| msgid "Default Route"
 msgid "_Default printer"
 msgstr "ডিফল্ট প্রিন্টার (_D)"
 
@@ -5011,7 +4896,6 @@ msgid "_Empty Trash"
 msgstr "ট্র্যাশ খালি করুন (_E)"
 
 #: ../panels/privacy/cc-privacy-panel.c:512
-#| msgid "Purge Trash & Temporary Files"
 msgid "Delete all the temporary files?"
 msgstr "সকল অস্থায়ী ফাইল মুছবেন?"
 
@@ -5029,7 +4913,6 @@ msgstr "ট্র্যাশ & অস্থায়ী ফাইল পার�
 
 # auto translated by TM merge from project: gnome-packagekit, version: 3.8.2, DocId: gnome-packagekit
 #: ../panels/privacy/cc-privacy-panel.c:576 ../panels/privacy/privacy.ui.h:36
-#| msgid "Software"
 msgid "Software Usage"
 msgstr "সফ্টওয়্যারের ব্যবহার"
 
@@ -5040,8 +4923,7 @@ msgstr "গোপনীয়তা"
 #: ../panels/privacy/gnome-privacy-panel.desktop.in.in.h:2
 msgid "Protect your personal information and control what others might see"
 msgstr ""
-"অাপনার ব্যক্তিগত তথ্য সুরক্ষিত রাখুন এবং অন্যরা কী দেখতে পাবেন না পাবেন তা "
-"নিয়ন্ত্রণ "
+"অাপনার ব্যক্তিগত তথ্য সুরক্ষিত রাখুন এবং অন্যরা কী দেখতে পাবেন না পাবেন তা নিয়ন্ত্রণ "
 "করুন"
 
 #. Translators: those are keywords for the privacy control-center panel
@@ -5050,8 +4932,7 @@ msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;"
 msgstr ""
-"স্ক্রীন;লক;সমস্যা নিরূপণ;ক্র্যাশ;ব্যক্তিগত;সাম্প্রতিক;অস্থায়ী;tmp;সূচি;নাম;নে"
-"টওয়ার্ক;"
+"স্ক্রীন;লক;সমস্যা নিরূপণ;ক্র্যাশ;ব্যক্তিগত;সাম্প্রতিক;অস্থায়ী;tmp;সূচি;নাম;নেটওয়ার্ক;"
 "পরিচয়;"
 
 #: ../panels/privacy/privacy.ui.h:1
@@ -5131,7 +5012,6 @@ msgid "Automatic Screen _Lock"
 msgstr "স্বয়ংক্রিয় স্ক্রীন লক (_L)"
 
 #: ../panels/privacy/privacy.ui.h:27
-#| msgid "Lock Screen _After Blank For"
 msgid "Lock screen _after blank for"
 msgstr "এত খালি থাকার পরে স্ক্রীন তালাবন্ধ করুন (_a)"
 
@@ -5144,17 +5024,14 @@ msgid ""
 "Automatically purge the Trash and temporary files to help keep your computer "
 "free of unnecessary sensitive information."
 msgstr ""
-"অাপনার কম্পিউটারকে অপ্রয়োজনীয় সংবেদনশীল তথ্য থেকে মুক্ত রাখতে ট্র্যাশ এবং "
-"অস্থায়ী "
+"অাপনার কম্পিউটারকে অপ্রয়োজনীয় সংবেদনশীল তথ্য থেকে মুক্ত রাখতে ট্র্যাশ এবং অস্থায়ী "
 "ফাইলগুলি স্বয়ংক্রিয় ভাবে পার্জ করুন।"
 
 #: ../panels/privacy/privacy.ui.h:31
-#| msgid "Automatically Empty _Trash"
 msgid "Automatically empty _Trash"
 msgstr "ট্র্যাশ স্বয়ংক্রিয় ভাবে খালি করুন (_T)"
 
 #: ../panels/privacy/privacy.ui.h:32
-#| msgid "Automatically Purge Temporary _Files"
 msgid "Automatically purge Temporary _Files"
 msgstr "অস্থায়ী ফাইলগুলি স্বয়ংক্রিয় ভাবে পার্জ করুন (_F)"
 
@@ -5172,24 +5049,22 @@ msgid ""
 "your data with third parties."
 msgstr ""
 "অাপনি কোন সফ্টওয়্যার ব্যবহার করছেন সেই বিষয়ে অামাদের তথ্য দিলে তা অাপনাকে "
-"অামাদের তরফ থেকে অারো নির্ভুল প্রস্তাবনা দিতে সাহায্য করে। এটি অামাদের "
-"সফ্টওয়্যার উন্নত করতেও সহায়তা করে।\n"
+"অামাদের তরফ থেকে অারো নির্ভুল প্রস্তাবনা দিতে সাহায্য করে। এটি অামাদের সফ্টওয়্যার "
+"উন্নত করতেও সহায়তা করে।\n"
 "\n"
-"অামরা সকল তথ্য বেনামেই সংগ্রহ করে থাকি, এবং অামরা কখনই তৃতীয় পক্ষের সংগে "
-"অাপনার ডেটা ভাগ করে নেব না।"
+"অামরা সকল তথ্য বেনামেই সংগ্রহ করে থাকি, এবং অামরা কখনই তৃতীয় পক্ষের সংগে অাপনার "
+"ডেটা ভাগ করে নেব না।"
 
 #: ../panels/privacy/privacy.ui.h:40
 msgid "_Send software usage statistics"
 msgstr "সফ্টওয়্যার ব্যবহারের পরিসংখ্যান পাঠান (_S)"
 
 #: ../panels/privacy/privacy.ui.h:41
-#| msgid "Privacy"
 msgid "Privacy Policy"
 msgstr "গোপনীয়তা নীতি"
 
 # auto translated by TM merge from project: Skynet topics, version: 1, DocId: 4507-74586
 #: ../panels/privacy/privacy.ui.h:42
-#| msgid "Location"
 msgid "_Location Services"
 msgstr "অবস্থান পরিষেবা (_L)"
 
@@ -5217,7 +5092,6 @@ msgstr "কোনো ইনপুট সোর্স পাওয়া যা�
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/region/cc-input-chooser.c:1076
-#| msgid "Other"
 msgctxt "Input Source"
 msgid "Other"
 msgstr "অন্যান্য"
@@ -5283,8 +5157,7 @@ msgstr "অঞ্চল & ভাষা"
 #: ../panels/region/gnome-region-panel.desktop.in.in.h:2
 msgid ""
 "Select your display language, formats, keyboard layouts and input sources"
-msgstr ""
-"অাপনার প্রদর্শন ভাষা, ফর্ম্যাট, কীবোর্ড সজ্জা এবং ইনপুট সোর্স নির্বাচন করুন"
+msgstr "অাপনার প্রদর্শন ভাষা, ফর্ম্যাট, কীবোর্ড সজ্জা এবং ইনপুট সোর্স নির্বাচন করুন"
 
 #. Translators: those are keywords for the region control-center panel
 #: ../panels/region/gnome-region-panel.desktop.in.in.h:4
@@ -5357,26 +5230,22 @@ msgstr "বিকল্প"
 # auto translated by TM merge from project: gnome-initial-setup, version: 0.12, DocId: gnome-initial-setup
 #: ../panels/region/region.ui.h:7
 msgid "Login settings are used by all users when logging into the system"
-msgstr ""
-"সিস্টেমে লগিন করার সময়ে সকল ব্যবহারকারীর দ্বারা লগিন সেটিং ব্যবহার করা হয়"
+msgstr "সিস্টেমে লগিন করার সময়ে সকল ব্যবহারকারীর দ্বারা লগিন সেটিং ব্যবহার করা হয়"
 
 # auto translated by TM merge from project: file-roller, version: 3.8.3, DocId: file-roller
 #: ../panels/search/cc-search-locations-dialog.c:476
-#| msgid "Places"
 msgctxt "Search Location"
 msgid "Places"
 msgstr "অবস্থান"
 
 # auto translated by TM merge from project: gnome-documents, version: 3.8.3.1, DocId: gnome-documents
 #: ../panels/search/cc-search-locations-dialog.c:478
-#| msgid "Bookmarks"
 msgctxt "Search Location"
 msgid "Bookmarks"
 msgstr "বুকমার্ক"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/search/cc-search-locations-dialog.c:480
-#| msgid "Other"
 msgctxt "Search Location"
 msgid "Other"
 msgstr "অন্যান্য"
@@ -5386,7 +5255,6 @@ msgid "Select Location"
 msgstr "অবস্থান নির্বাচন করুন"
 
 #: ../panels/search/cc-search-locations-dialog.c:682
-#| msgid "GOK"
 msgid "_OK"
 msgstr "ঠিক অাছে (_O)"
 
@@ -5402,9 +5270,7 @@ msgstr "অনুসন্ধান"
 #: ../panels/search/gnome-search-panel.desktop.in.in.h:2
 msgid ""
 "Control which applications show search results in the Activities Overview"
-msgstr ""
-"ক্রিয়াকলাপ পূর্বরূপে কোন অ্যাপ্লিকেশনগুলি সন্ধান ফলাফল দেখাবে তা নিয়ন্ত্রণ "
-"করুন"
+msgstr "ক্রিয়াকলাপ পূর্বরূপে কোন অ্যাপ্লিকেশনগুলি সন্ধান ফলাফল দেখাবে তা নিয়ন্ত্রণ করুন"
 
 #. Translators: those are keywords for the search control-center panel
 #: ../panels/search/gnome-search-panel.desktop.in.in.h:4
@@ -5445,13 +5311,11 @@ msgstr "বন্ধ"
 
 # auto translated by TM merge from project: rhsm-web, version: 0.0, DocId: management
 #: ../panels/sharing/cc-sharing-panel.c:304
-#| msgid "Enabled"
 msgctxt "service is enabled"
 msgid "Enabled"
 msgstr "সক্রিয়"
 
 #: ../panels/sharing/cc-sharing-panel.c:307
-#| msgid "Active Jobs"
 msgctxt "service is active"
 msgid "Active"
 msgstr "সক্রিয়"
@@ -5480,8 +5344,7 @@ msgid ""
 "share;sharing;ssh;host;name;remote;desktop;bluetooth;obex;media;audio;video;"
 "pictures;photos;movies;server;renderer;"
 msgstr ""
-"ভাগ;অংশীদারি;ssh;হোস্ট;নাম;রিমোট;ডেস্কটপ;ব্লুটুথ;obex;মিডিয়া;অডিও;ভিডিও;ছবি;ফ"
-"োটো;"
+"ভাগ;অংশীদারি;ssh;হোস্ট;নাম;রিমোট;ডেস্কটপ;ব্লুটুথ;obex;মিডিয়া;অডিও;ভিডিও;ছবি;ফোটো;"
 "মুভি;সার্ভার;রেন্ডরার;"
 
 #: ../panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in.h:1
@@ -5502,7 +5365,6 @@ msgstr "ভাগ করার জন্য কোনো নেটওয়ার�
 #. * vim: sw=2 ts=8 cindent noai bs=2
 #.
 #: ../panels/sharing/networks.ui.h:1
-#| msgid "Network"
 msgid "Networks"
 msgstr "নেটওয়ার্ক"
 
@@ -5515,8 +5377,7 @@ msgid ""
 "Bluetooth Sharing allows you to share files with other Bluetooth enabled "
 "devices"
 msgstr ""
-"ব্লুটুথ ভাগের মাধ্যমে অাপনি অন্যান্য ব্লুটুথ সক্রিয় ডিভাইসের সংগে ফাইল ভাগ "
-"করতে পারবেন"
+"ব্লুটুথ ভাগের মাধ্যমে অাপনি অন্যান্য ব্লুটুথ সক্রিয় ডিভাইসের সংগে ফাইল ভাগ করতে পারবেন"
 
 #: ../panels/sharing/sharing.ui.h:3
 msgid "Only Receive From Trusted Devices"
@@ -5551,8 +5412,7 @@ msgstr "দূরবর্তী লগ-ইন"
 
 #: ../panels/sharing/sharing.ui.h:10
 msgid "Some services are disabled because of no network access."
-msgstr ""
-"কোনো নেটওয়ার্ক অ্যাক্সেস না থাকায় কিছু পরিষেবাদি নিষ্ক্রিয় করা হয়েছে।"
+msgstr "কোনো নেটওয়ার্ক অ্যাক্সেস না থাকায় কিছু পরিষেবাদি নিষ্ক্রিয় করা হয়েছে।"
 
 #: ../panels/sharing/sharing.ui.h:12
 #, no-c-format
@@ -5560,8 +5420,7 @@ msgid ""
 "Personal File Sharing allows you to share your Public folder with others on "
 "your current network using: <a href=\"dav://%s\">dav://%s</a>"
 msgstr ""
-"ব্যক্তিগত ফাইল ভাগ এর ব্যবহার করে অন্যদের সংগে অাপনার সার্বজনীন ফোল্ডার ভাগ "
-"করতে "
+"ব্যক্তিগত ফাইল ভাগ এর ব্যবহার করে অন্যদের সংগে অাপনার সার্বজনীন ফোল্ডার ভাগ করতে "
 "দেয়: <a href=\"dav://%s\">dav://%s</a>"
 
 #: ../panels/sharing/sharing.ui.h:13
@@ -5583,18 +5442,15 @@ msgid ""
 "Allow remote users to view or control your screen by connecting to: <a href="
 "\"vnc://%s\">vnc://%s</a>"
 msgstr ""
-"এর সংগে সংযোগ করে রিমোট ব্যবহারকারীদেরকে অাপনার স্ক্রীন দেখতে বা নিয়ন্ত্রণ "
-"করতে "
+"এর সংগে সংযোগ করে রিমোট ব্যবহারকারীদেরকে অাপনার স্ক্রীন দেখতে বা নিয়ন্ত্রণ করতে "
 "অনুমতি দিন: <a href=\"vnc://%s\">vnc://%s</a>"
 
 #: ../panels/sharing/sharing.ui.h:20
-#| msgid "Remote Control"
 msgid "Allow Remote Control"
 msgstr "রিমোট কন্ট্রোলের অনুমতি দিন"
 
 # auto translated by TM merge from project: Skynet topics, version: 1, DocId: 5177-68190
 #: ../panels/sharing/sharing.ui.h:21
-#| msgid "Password"
 msgid "Password:"
 msgstr "পাসওয়ার্ড:"
 
@@ -5604,7 +5460,6 @@ msgstr "পাসওয়ার্ড দেখান"
 
 # auto translated by TM merge from project: RHEL Deployment Guide, version: 6.2, DocId: Product_Subscriptions_and_Entitlements
 #: ../panels/sharing/sharing.ui.h:23
-#| msgid "Options"
 msgid "Access Options"
 msgstr "অ্যাক্সেস বিকল্প"
 
@@ -5613,17 +5468,14 @@ msgid "New connections must ask for access"
 msgstr "নতুন সংযোগগুলিকে অবশ্যই অ্যাক্সেস চাইতে হবে"
 
 #: ../panels/sharing/sharing.ui.h:25
-#| msgid "Require Password"
 msgid "Require a password"
 msgstr "একটি পাসওয়ার্ডের প্রয়োজন"
 
 #: ../panels/sharing/sharing.ui.h:26
-#| msgid "Share Music, Photos and Videos with others on the current network."
 msgid "Share music, photos and videos over the network."
 msgstr "নেটওয়ার্কের মাধ্যমে মিউজিক, ফোটো এবং ভিডিও ভাগ করুন।"
 
 #: ../panels/sharing/sharing.ui.h:27
-#| msgid "Add Folder"
 msgid "Folders"
 msgstr "ফোল্ডারগুলি"
 
@@ -5872,18 +5724,14 @@ msgstr "এটিকে দেখা, শোনা, ধরন, পয়েন�
 
 #. Translators: those are keywords for the universal access control-center panel
 #: ../panels/universal-access/gnome-universal-access-panel.desktop.in.in.h:4
-#| msgid ""
-#| "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen Reader;text;font;"
-#| "size;AccessX;Sticky Keys;Slow Keys;Bounce Keys;Mouse Keys;"
 msgid ""
 "Keyboard;Mouse;a11y;Accessibility;Contrast;Zoom;Screen;Reader;text;font;size;"
 "AccessX;Sticky;Keys;Slow;Bounce;Mouse;"
 msgstr ""
-"কীবোর্ড;মাউস;a11y;অ্যাক্সেসযোগ্যতা;প্রাবল্যতা;জুম;স্ক্রিন;রিডার;পাঠ্য;হরফ;মাপ;"
-"AccessX;স্টিকি;কী;মন্থর;বাউন্স;মাউস;"
+"কীবোর্ড;মাউস;a11y;অ্যাক্সেসযোগ্যতা;প্রাবল্যতা;জুম;স্ক্রিন;রিডার;পাঠ্য;হরফ;মাপ;AccessX;"
+"স্টিকি;কী;মন্থর;বাউন্স;মাউস;"
 
 #: ../panels/universal-access/uap.ui.h:1
-#| msgid "Universal Access"
 msgid "_Always Show Universal Access Menu"
 msgstr "সর্বদা সার্বজনীন অ্যাক্সেস মেনু দেখান (_A)"
 
@@ -5893,31 +5741,26 @@ msgstr "দেখা"
 
 # auto translated by TM merge from project: gnome-themes-standard, version: 3.8.3, DocId: gnome-themes-standard
 #: ../panels/universal-access/uap.ui.h:3
-#| msgid "High Contrast"
 msgid "_High Contrast"
 msgstr "গাঢ় তারতম্য (_H)"
 
 # auto translated by TM merge from project: gnome-shell, version: 3.8.4, DocId: gnome-shell
 #: ../panels/universal-access/uap.ui.h:4
-#| msgid "Large Text"
 msgid "_Large Text"
 msgstr "বড় মাপের হরফ (_L)"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/universal-access/uap.ui.h:5
-#| msgid "Zoom"
 msgid "_Zoom"
 msgstr "জুম (_Z)"
 
 # auto translated by TM merge from project: gnome-shell, version: 3.8.4, DocId: gnome-shell
 #: ../panels/universal-access/uap.ui.h:7
-#| msgid "Screen Reader"
 msgid "Screen _Reader"
 msgstr "স্ক্রীন রিডার (_R)"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/universal-access/uap.ui.h:8
-#| msgid "Bounce Keys"
 msgid "_Sound Keys"
 msgstr "শব্দ কী (_S)"
 
@@ -5927,12 +5770,10 @@ msgstr "শোনা"
 
 # auto translated by TM merge from project: gnome-shell, version: 3.8.4, DocId: gnome-shell
 #: ../panels/universal-access/uap.ui.h:10
-#| msgid "Visual Alerts"
 msgid "_Visual Alerts"
 msgstr "দৃশ্যমান সূচনা (_V)"
 
 #: ../panels/universal-access/uap.ui.h:12
-#| msgid "On Screen Keyboard"
 msgid "Screen _Keyboard"
 msgstr "স্ক্রীন কীবোর্ড (_K)"
 
@@ -5941,13 +5782,11 @@ msgid "_Typing Assist (AccessX)"
 msgstr "টাইপিং সহায়তা (_T) (AccessX)"
 
 #: ../panels/universal-access/uap.ui.h:14
-#| msgid "Pointing and Clicking"
 msgid "Pointing & Clicking"
 msgstr "পয়েন্টিং & ক্লিকিং"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/universal-access/uap.ui.h:15
-#| msgid "Mouse Keys"
 msgid "_Mouse Keys"
 msgstr "মাউস-কি (_M)"
 
@@ -5966,13 +5805,11 @@ msgstr "অাপনার ফোকাস সরানোর সাথে স�
 
 # auto translated by TM merge from project: gnome-shell, version: 3.8.4, DocId: gnome-shell
 #: ../panels/universal-access/uap.ui.h:19
-#| msgid "Screen Reader"
 msgid "_Screen Reader"
 msgstr "স্ক্রীন রিডার (_S)"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/universal-access/uap.ui.h:20
-#| msgid "Bounce Keys"
 msgid "Sound Keys"
 msgstr "শব্দ কি"
 
@@ -5990,28 +5827,23 @@ msgid "_Test flash"
 msgstr "ফ্ল্যাশ পরীক্ষা (_T)"
 
 #: ../panels/universal-access/uap.ui.h:24
-#| msgid "Use a visual indication when an alert sound occurs"
 msgid "Use a visual indication when an alert sound occurs."
 msgstr "একটি সর্তকতা শব্দ দেখা দিলে একটি ভিজ্যুয়াল সূচনা ব্যবহার করুন।"
 
 #: ../panels/universal-access/uap.ui.h:25
-#| msgid "Flash the window title"
 msgid "Flash the _window title"
 msgstr "উইন্ডো শিরোনাম ফ্ল্যাশ করুন (_w)"
 
 #: ../panels/universal-access/uap.ui.h:26
-#| msgid "Flash the entire screen"
 msgid "Flash the entire _screen"
 msgstr "সমগ্র স্ক্রীন ফ্ল্যাশ করুন (_s)"
 
 #: ../panels/universal-access/uap.ui.h:27
-#| msgid "Typing"
 msgid "Typing Assist"
 msgstr "টাইপিং সহায়তা"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/universal-access/uap.ui.h:28
-#| msgid "Sticky Keys"
 msgid "_Sticky Keys"
 msgstr "স্টিকি-কি (_S)"
 
@@ -6029,7 +5861,6 @@ msgstr "একটি মডিফায়ার কী টেপা হলে �
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/universal-access/uap.ui.h:32
-#| msgid "Slow Keys"
 msgid "S_low Keys"
 msgstr "ধীর গতির-কি (_l)"
 
@@ -6042,8 +5873,6 @@ msgid "A_cceptance delay:"
 msgstr "স্বীকার করতে বিলম্ব (_c):"
 
 #: ../panels/universal-access/uap.ui.h:35
-#| msgctxt "keyboard, delay"
-#| msgid "Short"
 msgctxt "slow keys delay"
 msgid "Short"
 msgstr "সংক্ষিপ্ত"
@@ -6053,19 +5882,15 @@ msgid "Slow keys typing delay"
 msgstr "মন্থর কী টাইপিং বিলম্ব"
 
 #: ../panels/universal-access/uap.ui.h:37
-#| msgctxt "keyboard, delay"
-#| msgid "Long"
 msgctxt "slow keys delay"
 msgid "Long"
 msgstr "লম্বা"
 
 #: ../panels/universal-access/uap.ui.h:38
-#| msgid "Beep when a _modifer key is pressed"
 msgid "Beep when a key is pr_essed"
 msgstr "একটি কী টেপা হলে বীপ (_e)"
 
 #: ../panels/universal-access/uap.ui.h:39
-#| msgid "Beep when a key is _rejected"
 msgid "Beep when a key is _accepted"
 msgstr "একটি কী গৃহিত হলে বীপ অাওয়াজ করুন (_a)"
 
@@ -6075,7 +5900,6 @@ msgstr "একটি কী প্রত্যাখ্যান হলে ব�
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/universal-access/uap.ui.h:41
-#| msgid "Bounce Keys"
 msgid "_Bounce Keys"
 msgstr "বাউন্স-কি (_B)"
 
@@ -6084,8 +5908,6 @@ msgid "Ignores fast duplicate keypresses"
 msgstr "দ্রুত সদৃশ কী-টেপা উপেক্ষা করে"
 
 #: ../panels/universal-access/uap.ui.h:43
-#| msgctxt "keyboard, delay"
-#| msgid "Short"
 msgctxt "bounce keys delay"
 msgid "Short"
 msgstr "সংক্ষিপ্ত"
@@ -6095,14 +5917,11 @@ msgid "Bounce keys typing delay"
 msgstr "বাউন্স কী টাইপিং বিলম্ব"
 
 #: ../panels/universal-access/uap.ui.h:45
-#| msgctxt "keyboard, delay"
-#| msgid "Long"
 msgctxt "bounce keys delay"
 msgid "Long"
 msgstr "লম্বা"
 
 #: ../panels/universal-access/uap.ui.h:46
-#| msgid "Enable by Keyboard"
 msgid "_Enable by Keyboard"
 msgstr "কীবোর্ড দ্বারা সক্রিয় (_E)"
 
@@ -6116,7 +5935,6 @@ msgstr "ক্লিক সহায়তা"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/universal-access/uap.ui.h:49
-#| msgid "Simulated Secondary Click"
 msgid "_Simulated Secondary Click"
 msgstr "দ্বিতীয় ক্লিকের অনুকরণ (_S)"
 
@@ -6125,8 +5943,6 @@ msgid "Trigger a secondary click by holding down the primary button"
 msgstr "প্রাথমিক বোতাম ধরে রেখে একটি অপ্রধান ক্লিক ট্রিগার করুন"
 
 #: ../panels/universal-access/uap.ui.h:51
-#| msgctxt "keyboard, delay"
-#| msgid "Short"
 msgctxt "secondary click"
 msgid "Short"
 msgstr "সংক্ষিপ্ত"
@@ -6136,14 +5952,11 @@ msgid "Secondary click delay"
 msgstr "অপ্রধান ক্লিক বিলম্ব"
 
 #: ../panels/universal-access/uap.ui.h:53
-#| msgctxt "keyboard, delay"
-#| msgid "Long"
 msgctxt "secondary click delay"
 msgid "Long"
 msgstr "লম্বা"
 
 #: ../panels/universal-access/uap.ui.h:54
-#| msgid "Hover Click"
 msgid "_Hover Click"
 msgstr "হোভার ক্লিক (_H)"
 
@@ -6157,15 +5970,11 @@ msgid "D_elay:"
 msgstr "বিলম্ব: (_e)"
 
 #: ../panels/universal-access/uap.ui.h:57
-#| msgctxt "keyboard, delay"
-#| msgid "Short"
 msgctxt "dwell click delay"
 msgid "Short"
 msgstr "সংক্ষিপ্ত"
 
 #: ../panels/universal-access/uap.ui.h:58
-#| msgctxt "keyboard, delay"
-#| msgid "Long"
 msgctxt "dwell click delay"
 msgid "Long"
 msgstr "লম্বা"
@@ -6175,16 +5984,12 @@ msgid "Motion _threshold:"
 msgstr "মোশন থ্রেশোল্ড (_t):"
 
 #: ../panels/universal-access/uap.ui.h:60
-#| msgctxt "universal access, text size"
-#| msgid "Small"
 msgctxt "dwell click threshold"
 msgid "Small"
 msgstr "ছোট"
 
 # auto translated by TM merge from project: totem, version: 3.8.2, DocId: totem
 #: ../panels/universal-access/uap.ui.h:61
-#| msgctxt "universal access, text size"
-#| msgid "Large"
 msgctxt "dwell click threshold"
 msgid "Large"
 msgstr "বৃহৎ"
@@ -6399,7 +6204,6 @@ msgstr "প্রশাসক"
 
 # auto translated by TM merge from project: evolution, version: el6, DocId: evolution-2.32
 #: ../panels/user-accounts/data/account-dialog.ui.h:4
-#| msgid "_Full name"
 msgid "_Full Name"
 msgstr "সম্পূর্ণ নাম (_F)"
 
@@ -6410,11 +6214,9 @@ msgstr "অ্যাকাউন্ট ধরন (_T)"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:7
 #: ../panels/user-accounts/data/password-dialog.ui.h:7
-#| msgid "Choose password at next login"
 msgid "Allow user to set a password when they next login"
 msgstr ""
-"ব্যবহারকারী যখন পরের বার লগইন করবেন তখন তাকে একটি পাসওয়ার্ড সেট করার অনুমতি "
-"দিন"
+"ব্যবহারকারী যখন পরের বার লগইন করবেন তখন তাকে একটি পাসওয়ার্ড সেট করার অনুমতি দিন"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:8
 #: ../panels/user-accounts/data/password-dialog.ui.h:8
@@ -6430,8 +6232,8 @@ msgid ""
 "Enterprise login allows an existing centrally managed user account to be "
 "used on this device."
 msgstr ""
-"এন্টারপ্রাইজ লগিন এই ডিভাইসে একটি বিদ্যমান কেন্দ্রীয় ভাবে পরিচালিত "
-"ব্যবহারকারী অ্যাকাউন্ট ব্যবহারের অনুমতি দেয়।"
+"এন্টারপ্রাইজ লগিন এই ডিভাইসে একটি বিদ্যমান কেন্দ্রীয় ভাবে পরিচালিত ব্যবহারকারী "
+"অ্যাকাউন্ট ব্যবহারের অনুমতি দেয়।"
 
 # auto translated by TM merge from project: gtk3, version: 3.8.2, DocId: gtk30
 #: ../panels/user-accounts/data/account-dialog.ui.h:12
@@ -6452,7 +6254,6 @@ msgstr "এন্টারপ্রাইজ লগিন (_E)"
 
 #: ../panels/user-accounts/data/account-dialog.ui.h:16
 #: ../panels/user-accounts/um-account-dialog.c:1458
-#| msgid "Add User Account"
 msgid "Add User"
 msgstr "ব্যবহারকারী যোগ করুন"
 
@@ -6550,8 +6351,7 @@ msgid ""
 "Your fingerprint was successfully saved. You should now be able to log in "
 "using your fingerprint reader."
 msgstr ""
-"আপনার আঙুলের ছাপ সাফল্যের সাথে সংরক্ষিত হয়েছে। আঙুলের ছাপ পাঠের ব্যবস্থা "
-"(রিডার) "
+"আপনার আঙুলের ছাপ সাফল্যের সাথে সংরক্ষিত হয়েছে। আঙুলের ছাপ পাঠের ব্যবস্থা (রিডার) "
 "সহযোগে আপনি এখন লগ-ইন করতে সক্ষম হবেন।"
 
 # auto translated by TM merge from project: Cloudforms Cloud Engine User Guide, version: 1.0, DocId: Users_And_Roles
@@ -6573,7 +6373,6 @@ msgid "Login History"
 msgstr "লগিন ইতিহাস"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:1
-#| msgid "Changing password for"
 msgid "Change Password"
 msgstr "পাসওয়ার্ড পরিবর্তন করুন"
 
@@ -6582,17 +6381,14 @@ msgid "Ch_ange"
 msgstr "পরিবর্তন করুন (_a)"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:4
-#| msgid "_New password"
 msgid "_Verify New Password"
 msgstr "নতুন পাসওয়ার্ড যাচাই করুন (_V)"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:5
-#| msgid "_New password"
 msgid "_New Password"
 msgstr "নতুন পাসওয়ার্ড (_N)"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:6
-#| msgid "Current _password"
 msgid "Current _Password"
 msgstr "বর্তমান পাসওয়ার্ড (_P)"
 
@@ -6637,7 +6433,6 @@ msgid "Authentication is required to change user data"
 msgstr "ব্যবহারকারী ডেটা পরিবর্তন করতে প্রমাণীকরণের প্রয়োজন"
 
 #: ../panels/user-accounts/pw-utils.c:81
-#| msgid "The new password does not contain enough different characters"
 msgctxt "Password hint"
 msgid "The new password needs to be different from the old one."
 msgstr "নতুন পাসওয়ার্ডটি পুরানো পাসওয়ার্ডের থেকে অালাদা হতে হবে।"
@@ -6648,7 +6443,6 @@ msgid "Try changing some letters and numbers."
 msgstr "কিছু অক্ষর এবং সংখ্যা পরিবর্তন করে চেষ্টা করুন।"
 
 #: ../panels/user-accounts/pw-utils.c:85 ../panels/user-accounts/pw-utils.c:93
-#| msgid "Changing password for"
 msgctxt "Password hint"
 msgid "Try changing the password a bit more."
 msgstr "পাসওয়ার্ডটি অনেকটা বদলে চেষ্টা করুন"
@@ -6714,8 +6508,8 @@ msgid ""
 "Try to avoid repeating the same type of character: you need to mix up "
 "letters, numbers and punctuation."
 msgstr ""
-"একই ধরনের অক্ষর লেখা এড়িয়ে যাওয়ার চেষ্টা করুন: অাপনাকে অক্ষর, সংখ্যা এবং "
-"যতিচিহ্ন মিলিয়ে মিশিয়ে ব্যবহার করতে হবে।"
+"একই ধরনের অক্ষর লেখা এড়িয়ে যাওয়ার চেষ্টা করুন: অাপনাকে অক্ষর, সংখ্যা এবং যতিচিহ্ন "
+"মিলিয়ে মিশিয়ে ব্যবহার করতে হবে।"
 
 #: ../panels/user-accounts/pw-utils.c:113
 msgctxt "Password hint"
@@ -6731,8 +6525,7 @@ msgstr "অারো বেশি করে অক্ষর, সংখ্যা 
 msgctxt "Password hint"
 msgid "Mix uppercase and lowercase and use a number or two."
 msgstr ""
-"বড় এবং ছোট হাতের অক্ষর মিলিয়ে মিশিয়ে লিখুন এবং এক বা দুইটি সংখ্যা ব্যবহার "
-"করুন।"
+"বড় এবং ছোট হাতের অক্ষর মিলিয়ে মিশিয়ে লিখুন এবং এক বা দুইটি সংখ্যা ব্যবহার করুন।"
 
 #: ../panels/user-accounts/pw-utils.c:119
 msgctxt "Password hint"
@@ -6740,8 +6533,7 @@ msgid ""
 "Good password! Adding more letters, numbers and punctuation will make it "
 "stronger."
 msgstr ""
-"ভালো পাসওয়ার্ড! অারো অক্ষর, সংখ্যা এবং যতি চিহ্ন যোগ করলে পাসওয়ার্ড শক্তিশালী "
-"হবে।"
+"ভালো পাসওয়ার্ড! অারো অক্ষর, সংখ্যা এবং যতি চিহ্ন যোগ করলে পাসওয়ার্ড শক্তিশালী হবে।"
 
 #: ../panels/user-accounts/pw-utils.c:141
 #: ../panels/user-accounts/pw-utils.c:171
@@ -6751,7 +6543,6 @@ msgstr "শক্তি: দুর্বল"
 
 #: ../panels/user-accounts/pw-utils.c:145
 #: ../panels/user-accounts/pw-utils.c:172
-#| msgid "Length:"
 msgctxt "Password strength"
 msgid "Strength: Low"
 msgstr "শক্তি: কম"
@@ -6812,8 +6603,7 @@ msgstr "পুরনো এবং নতুন পাসওয়ার্ড �
 #: ../panels/user-accounts/run-passwd.c:528
 #, c-format
 msgid "Your password has been changed since you initially authenticated!"
-msgstr ""
-"অাপনার প্রারম্ভিক ভাবে প্রমাণীকরণের সময়ে অাপনার পাসওয়ার্ড পরিবর্তিত হয়েছে!"
+msgstr "অাপনার প্রারম্ভিক ভাবে প্রমাণীকরণের সময়ে অাপনার পাসওয়ার্ড পরিবর্তিত হয়েছে!"
 
 #: ../panels/user-accounts/run-passwd.c:532
 #, c-format
@@ -6836,7 +6626,6 @@ msgstr "অ্যাকাউন্ট যোগ করতে ব্যর্থ
 
 # auto translated by TM merge from project: gnome-initial-setup, version: 0.12, DocId: gnome-initial-setup
 #: ../panels/user-accounts/um-account-dialog.c:452
-#| msgid "Passwords do not match"
 msgid "Passwords do not match."
 msgstr "পাসওয়ার্ডগুলি মিলছে না।"
 
@@ -6866,7 +6655,6 @@ msgstr ""
 
 # auto translated by TM merge from project: gnome-initial-setup, version: 0.12, DocId: gnome-initial-setup
 #: ../panels/user-accounts/um-account-dialog.c:1042
-#| msgid "Invalid password, please try again"
 msgid ""
 "That login password didn't work.\n"
 "Please try again."
@@ -6888,8 +6676,7 @@ msgstr "ডোমেন খুঁজে পাওয়া যায়নি। হ�
 msgid ""
 "You are not allowed to access the device. Contact your system administrator."
 msgstr ""
-"আপনি এই ডিভাইস ব্যবহার করতে অনুমোদিত নন। অনুগ্রহ করে সিস্টেম "
-"অ্যাডমিনিস্ট্রেটরের "
+"আপনি এই ডিভাইস ব্যবহার করতে অনুমোদিত নন। অনুগ্রহ করে সিস্টেম অ্যাডমিনিস্ট্রেটরের "
 "সাথে যোগাযোগ করুন।"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
@@ -6923,8 +6710,7 @@ msgid ""
 "Do you want to delete your registered fingerprints so fingerprint login is "
 "disabled?"
 msgstr ""
-"আঙুলের ছাপ সহযোগে লগ-ইন ব্যবস্থা নিষ্ক্রিয় করার উদ্দেশ্যে নিবন্ধিত আঙুলের "
-"ছাপগুলি মুছে "
+"আঙুলের ছাপ সহযোগে লগ-ইন ব্যবস্থা নিষ্ক্রিয় করার উদ্দেশ্যে নিবন্ধিত আঙুলের ছাপগুলি মুছে "
 "ফেলা হবে কি?"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
@@ -6959,8 +6745,7 @@ msgstr "আঙুলের ছাপ পাঠের কোনো ব্যব�
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #: ../panels/user-accounts/um-fingerprint-dialog.c:648
 msgid "Please contact your system administrator for help."
-msgstr ""
-"অনুগ্রহ করে সহায়তার জন্য আপনার সিস্টেম অ্যাডমিনিস্ট্রটরের সাথে যোগাযোগ করুন।"
+msgstr "অনুগ্রহ করে সহায়তার জন্য আপনার সিস্টেম অ্যাডমিনিস্ট্রটরের সাথে যোগাযোগ করুন।"
 
 # translation auto-copied from project control-center, version 3.8.3, document gnome-control-center-2.0
 #. translators:
@@ -6974,8 +6759,7 @@ msgid ""
 "To enable fingerprint login, you need to save one of your fingerprints, "
 "using the '%s' device."
 msgstr ""
-"আঙুলের ছাপ সহযোগে লগ-ইন ব্যবস্থা সক্রিয় করার জন্য, '%s' সহযোগে অন্তত একটি "
-"আঙুলের "
+"আঙুলের ছাপ সহযোগে লগ-ইন ব্যবস্থা সক্রিয় করার জন্য, '%s' সহযোগে অন্তত একটি আঙুলের "
 "ছাপ সংরক্ষণ করা আবশ্যক।"
 
 #: ../panels/user-accounts/um-fingerprint-dialog.c:738
@@ -7057,7 +6841,6 @@ msgid "Password could not be changed"
 msgstr "পাসওয়ার্ড পরিবর্তন করা যাবে না"
 
 #: ../panels/user-accounts/um-password-dialog.c:286
-#| msgid "The passwords do not match"
 msgid "The passwords do not match."
 msgstr "পাসওয়ার্ড মিলছে না।"
 
@@ -7147,8 +6930,7 @@ msgid ""
 "It is possible to keep the home directory, mail spool and temporary files "
 "around when deleting a user account."
 msgstr ""
-"একটি ব্যবহারকারী অ্যাকাউন্ট মোছার সময়ে হোম ডিরেক্টরি, মেল স্পুল এবং অস্থায়ী "
-"ফাইলগুলি "
+"একটি ব্যবহারকারী অ্যাকাউন্ট মোছার সময়ে হোম ডিরেক্টরি, মেল স্পুল এবং অস্থায়ী ফাইলগুলি "
 "হাতের কাছে রাখা সম্ভব।"
 
 #: ../panels/user-accounts/um-user-panel.c:511
@@ -7185,8 +6967,7 @@ msgstr "অ্যাকাউন্ট পরিষেবায় যোগা�
 
 #: ../panels/user-accounts/um-user-panel.c:1074
 msgid "Please make sure that the AccountService is installed and enabled."
-msgstr ""
-"দয়া করে নিশ্চিত করুন যে, AccountService ইনস্টল করা এবং সক্রিয় করা হয়েছে।"
+msgstr "দয়া করে নিশ্চিত করুন যে, AccountService ইনস্টল করা এবং সক্রিয় করা হয়েছে।"
 
 #: ../panels/user-accounts/um-user-panel.c:1115
 msgid ""
@@ -7229,41 +7010,32 @@ msgstr "অামার অ্যাকাউন্ট"
 # auto translated by TM merge from project: gnome-initial-setup, version: 0.12, DocId: gnome-initial-setup
 #: ../panels/user-accounts/um-utils.c:567
 #, c-format
-#| msgid "A user with the username '%s' already exists"
 msgid "A user with the username '%s' already exists."
 msgstr "%s নামের একটি ব্যবহারকারী ইতিমধ্যেই উপস্থিত রয়েছে।"
 
 # auto translated by TM merge from project: gnome-initial-setup, version: 0.12, DocId: gnome-initial-setup
 #: ../panels/user-accounts/um-utils.c:571
 #, c-format
-#| msgid "The username is too long"
 msgid "The username is too long."
 msgstr "ব্যবহারকারীর নাম অতিশয় দীর্ঘ।"
 
 # auto translated by TM merge from project: gnome-initial-setup, version: 0.12, DocId: gnome-initial-setup
 #: ../panels/user-accounts/um-utils.c:574
-#| msgid "The username cannot start with a '-'"
 msgid "The username cannot start with a '-'."
 msgstr "একটি ব্যবহারকারীর নাম '-' দিয়ে শুরু হতে পারে না।"
 
 # auto translated by TM merge from project: gnome-initial-setup, version: 0.12, DocId: gnome-initial-setup
 #: ../panels/user-accounts/um-utils.c:577
-#| msgid ""
-#| "The username must only consist of:\n"
-#| " ➣ letters from the English alphabet\n"
-#| " ➣ digits\n"
-#| " ➣ any of the characters '.', '-' and '_'"
 msgid ""
 "The username should only consist of lower and upper case letters from a-z, "
 "digits and any of characters '.', '-' and '_'."
 msgstr ""
-"ব্যবহারকারী নামে শুধুমাত্র a-z-এর বড় হাতের এবং ছোট হাতের অক্ষর, সংখ্যা এবং "
-"'.', '-' এবং '_' এর মধ্যে যেকোনো অক্ষর থাকতে পারে।"
+"ব্যবহারকারী নামে শুধুমাত্র a-z-এর বড় হাতের এবং ছোট হাতের অক্ষর, সংখ্যা এবং '.', "
+"'-' এবং '_' এর মধ্যে যেকোনো অক্ষর থাকতে পারে।"
 
 #: ../panels/user-accounts/um-utils.c:581
 msgid "This will be used to name your home folder and can't be changed."
-msgstr ""
-"এটি অাপনার হোম ফোল্ডারের নামকরণ করতে ব্যবহৃত হবে এবং পরিবর্তন করা যাবে না।"
+msgstr "এটি অাপনার হোম ফোল্ডারের নামকরণ করতে ব্যবহৃত হবে এবং পরিবর্তন করা যাবে না।"
 
 #. Translators: This is a date format string in the style of "Feb 24".
 #: ../panels/user-accounts/um-utils.c:827
@@ -7284,23 +7056,19 @@ msgid "Map buttons to functions"
 msgstr "কাজের মানচিত্র বোতাম"
 
 #: ../panels/wacom/button-mapping.ui.h:3
-#| msgid ""
-#| "To edit a shortcut, click the row and hold down the new keys or press "
-#| "Backspace to clear."
 msgid ""
 "To edit a shortcut, choose the \"Send Keystroke\" action, press the keyboard "
 "shortcut button and hold down the new keys or press Backspace to clear."
 msgstr ""
-"কোনো শর্টকাট সম্পাদনা করতে, \"কীস্ট্রোক পাঠান\" বাছুন, কীবোর্ড শর্টকাট বোতাম "
-"টিপে নতুন কী ধরে থাকুন বা সাফ করতে ব্যাকস্পেস টিপুন।"
+"কোনো শর্টকাট সম্পাদনা করতে, \"কীস্ট্রোক পাঠান\" বাছুন, কীবোর্ড শর্টকাট বোতাম টিপে "
+"নতুন কী ধরে থাকুন বা সাফ করতে ব্যাকস্পেস টিপুন।"
 
 #: ../panels/wacom/calibrator/calibrator-gui.c:83
 msgid ""
 "Please tap the target markers as they appear on screen to calibrate the "
 "tablet."
 msgstr ""
-"ট্যাবলেট ক্যালিব্রেট করতে টার্গেট মার্কারগুলি স্ক্রীনে দেখা দেওয়ার সময়ে "
-"দয়া করে "
+"ট্যাবলেট ক্যালিব্রেট করতে টার্গেট মার্কারগুলি স্ক্রীনে দেখা দেওয়ার সময়ে দয়া করে "
 "তাদের অালতো চাপুন।"
 
 #: ../panels/wacom/calibrator/calibrator-gui.c:87
@@ -7425,7 +7193,6 @@ msgstr "প্রদর্শন রিজোলিউশন সামঞ্জ�
 
 # auto translated by TM merge from project: gnome-shell, version: 3.8.4, DocId: gnome-shell
 #: ../panels/wacom/gnome-wacom-properties.ui.h:12
-#| msgid "Mouse Settings"
 msgid "Adjust mouse settings"
 msgstr "মাউস সংক্রান্ত বৈশিষ্ট্য সামজ্ঞস্যপূর্ণ করুন"
 
@@ -7540,7 +7307,6 @@ msgid "Bottom Button #%d"
 msgstr "নীচের বাটন #%d"
 
 #: ../panels/wacom/gsd-wacom-key-shortcut-button.c:263
-#| msgid "No shortcut set"
 msgid "New shortcut…"
 msgstr "নতুন শর্টকাট…"
 
@@ -7657,8 +7423,7 @@ msgid ""
 "Run '%s --help' to see a full list of available command line options.\n"
 msgstr ""
 "%s\n"
-"কমান্ড-লাইন থেকে ব্যবহারযোগ্য বিকল্পের সম্পূর্ণ তালিকা দেখার জন্য '%s --help' "
-"প্রয়োগ "
+"কমান্ড-লাইন থেকে ব্যবহারযোগ্য বিকল্পের সম্পূর্ণ তালিকা দেখার জন্য '%s --help' প্রয়োগ "
 "করুন।\n"
 
 #: ../shell/cc-application.c:193

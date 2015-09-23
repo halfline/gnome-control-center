@@ -904,8 +904,6 @@ msgstr "%e. %Bta %Y, %R"
 #. Translators: "city, country"
 #: ../panels/datetime/cc-datetime-panel.c:523
 #, c-format
-#| msgctxt "login date-time"
-#| msgid "%s, %s"
 msgctxt "timezone loc"
 msgid "%s, %s"
 msgstr "%s, %s"
@@ -914,7 +912,6 @@ msgstr "%s, %s"
 #. Translators: "timezone (details)"
 #: ../panels/datetime/cc-datetime-panel.c:553
 #, c-format
-#| msgid "%d x %d (%s)"
 msgctxt "timezone desc"
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -939,7 +936,6 @@ msgstr "%R"
 #. Translators: "timezone (utc shift)"
 #: ../panels/datetime/cc-datetime-panel.c:576
 #, c-format
-#| msgid "%d x %d (%s)"
 msgctxt "timezone map"
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -1193,7 +1189,6 @@ msgstr "Valitse kuinka näyttöjä ja projektoreja käsitellään"
 
 #. Translators: those are keywords for the display control-center panel
 #: ../panels/display/gnome-display-panel.desktop.in.in.h:4
-#| msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;"
 msgid "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;"
 msgstr ""
 "Panel;Projector;xrandr;Screen;Resolution;Refresh;Monitor;Paneeli;Projektori;"
@@ -1656,7 +1651,6 @@ msgstr "Compose-näppäin"
 
 #: ../panels/keyboard/cc-keyboard-option.c:368
 #, fuzzy
-#| msgid "Switch to next source"
 msgid "Modifiers-only switch to next source"
 msgstr "Vaihda seuraavaan lähteeseen"
 
@@ -1818,9 +1812,6 @@ msgstr ""
 
 #: ../panels/keyboard/keyboard-shortcuts.c:1436
 #, c-format
-#| msgid ""
-#| "If you reassign the shortcut to \"%s\", the \"%s\" shortcut will be "
-#| "disabled."
 msgid ""
 "\"%s\" is currently associated with \"%s\", this shortcut will be disabled "
 "if you move forward."
@@ -1829,7 +1820,6 @@ msgstr ""
 "jos jatkat eteenpäin."
 
 #: ../panels/keyboard/keyboard-shortcuts.c:1442
-#| msgid "_Reassign"
 msgid "_Assign"
 msgstr "_Aseta"
 
@@ -2583,7 +2573,6 @@ msgstr ""
 "Virhe: %s."
 
 #: ../panels/network/connection-editor/vpn-helpers.c:371
-#| msgid "Export VPN connection..."
 msgid "Export VPN connection"
 msgstr "Vie VPN-yhteys"
 
@@ -2621,9 +2610,6 @@ msgstr "Hallitse internetyhteyden asetuksia"
 
 #. Translators: those are keywords for the network control-center panel
 #: ../panels/network/gnome-network-panel.desktop.in.in.h:4
-#| msgid ""
-#| "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;"
-#| "vpn;vlan;bridge;bond;"
 msgid ""
 "Network;Wireless;Wi-Fi;Wifi;IP;LAN;Proxy;WAN;Broadband;Modem;Bluetooth;vpn;"
 "vlan;bridge;bond;DNS;"
@@ -3358,7 +3344,6 @@ msgid "MSCHAPv2"
 msgstr "MSCHAPv2"
 
 #: ../panels/network/wireless-security/eap-method-fast.c:409
-#| msgid "Choose a PAC file..."
 msgid "Choose a PAC file"
 msgstr "Valitse PAC-tiedosto"
 
@@ -3424,7 +3409,6 @@ msgstr "MD5"
 #: ../panels/network/wireless-security/eap-method-peap.c:350
 #: ../panels/network/wireless-security/eap-method-tls.c:456
 #: ../panels/network/wireless-security/eap-method-ttls.c:350
-#| msgid "Choose a Certificate Authority certificate..."
 msgid "Choose a Certificate Authority certificate"
 msgstr "Valitse varmentajavarmenne"
 
@@ -3469,12 +3453,10 @@ msgstr ""
 "(Voit suojata yksityisen avaimesi openssl:llä)"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:450
-#| msgid "Choose your personal certificate..."
 msgid "Choose your personal certificate"
 msgstr "Valitse henkilökohtainen varmenteesi"
 
 #: ../panels/network/wireless-security/eap-method-tls.c:462
-#| msgid "Choose your private key..."
 msgid "Choose your private key"
 msgstr "Valitse yksityinen avaimesi"
 
@@ -4359,13 +4341,11 @@ msgstr "Ladataan ajuritietokantaa..."
 
 #. Translators: The found device is a JetDirect printer
 #: ../panels/printers/pp-host.c:506
-#| msgid "Remove Printer"
 msgid "JetDirect Printer"
 msgstr "JetDirect-tulostin"
 
 #. Translators: The found device is a Line Printer Daemon printer
 #: ../panels/printers/pp-host.c:756
-#| msgid "%s Printer"
 msgid "LPD Printer"
 msgstr "LPD-tulostin"
 
@@ -4897,7 +4877,6 @@ msgid "Privacy Policy"
 msgstr "Tietosuoja"
 
 #: ../panels/privacy/privacy.ui.h:42
-#| msgid "Location: %s"
 msgid "_Location Services"
 msgstr "Sijai_ntipalvelut"
 
@@ -5133,13 +5112,11 @@ msgid "Off"
 msgstr "Poissa"
 
 #: ../panels/sharing/cc-sharing-panel.c:304
-#| msgid "Enabled"
 msgctxt "service is enabled"
 msgid "Enabled"
 msgstr "Käytössä"
 
 #: ../panels/sharing/cc-sharing-panel.c:307
-#| msgid "Active Jobs"
 msgctxt "service is active"
 msgid "Active"
 msgstr "Aktiivinen"
@@ -5187,7 +5164,6 @@ msgstr "Ei verkkoja valittu jakamista varten"
 #. * vim: sw=2 ts=8 cindent noai bs=2
 #.
 #: ../panels/sharing/networks.ui.h:1
-#| msgid "Network"
 msgid "Networks"
 msgstr "Verkot"
 
@@ -5290,12 +5266,10 @@ msgid "Require a password"
 msgstr "Vaadi salasana"
 
 #: ../panels/sharing/sharing.ui.h:26
-#| msgid "Share Music, Photos and Videos with others on the current network."
 msgid "Share music, photos and videos over the network."
 msgstr "Jaa musiikkia, valokuvia ja videoita verkon kautta."
 
 #: ../panels/sharing/sharing.ui.h:27
-#| msgid "Add Folder"
 msgid "Folders"
 msgstr "Kansiot"
 
@@ -6146,7 +6120,6 @@ msgid "Login History"
 msgstr "Kirjautumishistoria"
 
 #: ../panels/user-accounts/data/password-dialog.ui.h:1
-#| msgid "Show Password"
 msgid "Change Password"
 msgstr "Vaihda salasana"
 
@@ -6755,25 +6728,19 @@ msgstr "Oma tili"
 
 #: ../panels/user-accounts/um-utils.c:567
 #, c-format
-#| msgid "A user with the username '%s' already exists"
 msgid "A user with the username '%s' already exists."
 msgstr "Käyttäjä tunnuksella '%s' on jo olemassa."
 
 #: ../panels/user-accounts/um-utils.c:571
 #, c-format
-#| msgid "The username is too long"
 msgid "The username is too long."
 msgstr "Käyttäjätunnus on liian pitkä."
 
 #: ../panels/user-accounts/um-utils.c:574
-#| msgid "The username cannot start with a '-'"
 msgid "The username cannot start with a '-'."
 msgstr "Käyttäjätunnus ei voi alkaa merkillä '-'."
 
 #: ../panels/user-accounts/um-utils.c:577
-#| msgid ""
-#| "The username should only consist of lower and upper case letters from a-"
-#| "z, digits and any of characters '.', '-' and '_'"
 msgid ""
 "The username should only consist of lower and upper case letters from a-z, "
 "digits and any of characters '.', '-' and '_'."

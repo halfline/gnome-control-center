@@ -5630,7 +5630,6 @@ msgid "_Disable if two keys are pressed together"
 msgstr "Iš_jungti, jei du klavišai paspaudžiami kartu"
 
 #: ../panels/universal-access/uap.ui.h:31
-#| msgid "Beep when a _modifer key is pressed"
 msgid "Beep when a _modifier key is pressed"
 msgstr "Pyptelėti, kai paspaustas _modifikatorius"
 

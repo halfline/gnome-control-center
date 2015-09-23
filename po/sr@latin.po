@@ -19,8 +19,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : "
-"n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"Plural-Forms: nplurals=4; plural=n==1? 3 : n%10==1 && n%100!=11 ? 0 : n"
+"%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Project-Style: gnome\n"
 
 #: ../panels/background/background.ui.h:1
@@ -540,9 +540,9 @@ msgid ""
 "screen. The longer you spend on calibration, the better the quality of the "
 "color profile."
 msgstr ""
-"Kalibracija će proizvesti profil koji možete da koristite da upravljate bojom "
-"vašeg ekrana. Što duže bude trajala kalibracija, to će biti bolji kvalitet "
-"profila boje."
+"Kalibracija će proizvesti profil koji možete da koristite da upravljate "
+"bojom vašeg ekrana. Što duže bude trajala kalibracija, to će biti bolji "
+"kvalitet profila boje."
 
 #: ../panels/color/color.ui.h:3
 msgid ""
@@ -596,8 +596,8 @@ msgid ""
 "Please set the display to a brightness that is typical for you. Color "
 "management will be most accurate at this brightness level."
 msgstr ""
-"Molim podesite ekran na osvetljaj koji vam najviše odgovara. Upravljanje bojom "
-"će biti najtačnije na tom nivou osvetljaja."
+"Molim podesite ekran na osvetljaj koji vam najviše odgovara. Upravljanje "
+"bojom će biti najtačnije na tom nivou osvetljaja."
 
 #: ../panels/color/color.ui.h:16
 msgid ""
@@ -3296,8 +3296,8 @@ msgid ""
 "to insecure, rogue Wi-Fi networks.  Would you like to choose a Certificate "
 "Authority certificate?"
 msgstr ""
-"Ukoliko ne izaberete uverenje izdavača ovlašćenja (CA) vaša bežična veza može "
-"biti nesigurna ili lažna.  Da li želite da izaberete uverenje?"
+"Ukoliko ne izaberete uverenje izdavača ovlašćenja (CA) vaša bežična veza "
+"može biti nesigurna ili lažna.  Da li želite da izaberete uverenje?"
 
 #: ../panels/network/wireless-security/eap-method.c:281
 msgid "Ignore"
@@ -3429,8 +3429,8 @@ msgid ""
 "\n"
 "(You can password-protect your private key with openssl)"
 msgstr ""
-"Izgleda da izabrani privatni ključ nije zaštićen lozinkom.  Ovo može ugroziti "
-"vaše sigurnosne podatke.  Izaberite privatni ključ koji ze zaštićen "
+"Izgleda da izabrani privatni ključ nije zaštićen lozinkom.  Ovo može "
+"ugroziti vaše sigurnosne podatke.  Izaberite privatni ključ koji ze zaštićen "
 "lozinkom.\n"
 "\n"
 "(Možete zaštititi privatne ključeve koristeći „openssl“)"
@@ -3707,8 +3707,8 @@ msgid ""
 "Adding an account allows your applications to access it for documents, mail, "
 "contacts, calendar, chat and more."
 msgstr ""
-"Dodavanje naloga omogućava vašim aplikacijama da mu pristupe zbog dokumenata, "
-"pošte, kontakata, kalendara, ćaskanja i drugih stvari."
+"Dodavanje naloga omogućava vašim aplikacijama da mu pristupe zbog "
+"dokumenata, pošte, kontakata, kalendara, ćaskanja i drugih stvari."
 
 #: ../panels/power/cc-power-panel.c:192
 msgid "Unknown time"
@@ -3968,15 +3968,16 @@ msgstr "Napajanje"
 
 #: ../panels/power/gnome-power-panel.desktop.in.in.h:2
 msgid "View your battery status and change power saving settings"
-msgstr "Pogledajte stanje vaše baterije i izmenite podešavanja uštede napajanja"
+msgstr ""
+"Pogledajte stanje vaše baterije i izmenite podešavanja uštede napajanja"
 
 #. Translators: those are keywords for the power control-center panel
 #: ../panels/power/gnome-power-panel.desktop.in.in.h:4
 msgid ""
 "Power;Sleep;Suspend;Hibernate;Battery;Brightness;Dim;Blank;Monitor;DPMS;Idle;"
 msgstr ""
-"napajanje;spavanje;obustava;zamrzavanje;baterija;osvetljaj;zatamnjenje;monitor;"
-"DPMS;mirovanje;"
+"napajanje;spavanje;obustava;zamrzavanje;baterija;osvetljaj;zatamnjenje;"
+"monitor;DPMS;mirovanje;"
 
 #: ../panels/power/power.ui.h:1
 msgid "Hibernate"
@@ -4742,8 +4743,8 @@ msgid ""
 "screen;lock;diagnostics;crash;private;recent;temporary;tmp;index;name;"
 "network;identity;"
 msgstr ""
-"ekran;zaključaj;dijagnoza;pad;urušavanje;lično;skorašnje;nedavno;privremen;prv;"
-"popis;naziv;mreža;identitet;"
+"ekran;zaključaj;dijagnoza;pad;urušavanje;lično;skorašnje;nedavno;privremen;"
+"prv;popis;naziv;mreža;identitet;"
 
 #: ../panels/privacy/privacy.ui.h:1
 msgid "Screen Turns Off"
@@ -5035,7 +5036,8 @@ msgstr "Mogućnosti"
 #: ../panels/region/region.ui.h:7
 msgid "Login settings are used by all users when logging into the system"
 msgstr ""
-"Podešavanja prijavljivanja koriste svi korisnici kada se prijavljuju na sistem"
+"Podešavanja prijavljivanja koriste svi korisnici kada se prijavljuju na "
+"sistem"
 
 #: ../panels/search/cc-search-locations-dialog.c:476
 msgctxt "Search Location"
@@ -5150,8 +5152,8 @@ msgstr "Uključite ili isključite udaljeno prijavljivanje"
 #: ../panels/sharing/org.gnome.controlcenter.remote-login-helper.policy.in.in.h:2
 msgid "Authentication is required to enable or disable remote login"
 msgstr ""
-"Potrebno je potvrđivanje identiteta za uključivanje ili isključivanje udaljenog "
-"prijavljivanja"
+"Potrebno je potvrđivanje identiteta za uključivanje ili isključivanje "
+"udaljenog prijavljivanja"
 
 #. Label
 #: ../panels/sharing/cc-sharing-networks.c:303
@@ -5174,8 +5176,8 @@ msgid ""
 "Bluetooth Sharing allows you to share files with other Bluetooth enabled "
 "devices"
 msgstr ""
-"Deljenje blututa vam omogućava da delite datoteke sa drugim uključenim blutut "
-"uređajima"
+"Deljenje blututa vam omogućava da delite datoteke sa drugim uključenim "
+"blutut uređajima"
 
 #: ../panels/sharing/sharing.ui.h:3
 msgid "Only Receive From Trusted Devices"
@@ -5283,7 +5285,8 @@ msgstr "Izmenite nivoe zvuka, ulaze, izlaze i zvuke upozorenja"
 #. Translators: those are keywords for the sound control-center panel
 #: ../panels/sound/data/gnome-sound-panel.desktop.in.in.h:4
 msgid "Card;Microphone;Volume;Fade;Balance;Bluetooth;Headset;Audio;"
-msgstr "kartica;mikrofon;jačina zvuka;iščezavanje;balans;blutut;slušalice;zvuk;"
+msgstr ""
+"kartica;mikrofon;jačina zvuka;iščezavanje;balans;blutut;slušalice;zvuk;"
 
 #. Translators: This is the name of an audio file that sounds like the bark of a dog.
 #. You might want to translate it into the equivalent words of your language.
@@ -5633,7 +5636,6 @@ msgid "_Disable if two keys are pressed together"
 msgstr "_Isključi ako su dva tastera pritisnuta istovremeno"
 
 #: ../panels/universal-access/uap.ui.h:31
-#| msgid "Beep when a _modifer key is pressed"
 msgid "Beep when a _modifier key is pressed"
 msgstr "Zapišti kada je pritisnut _izmenjivač"
 
@@ -7569,8 +7571,8 @@ msgstr "postavke;podešavanja;"
 #~ msgid ""
 #~ "Choose a picture that will be shown at the login screen for this account."
 #~ msgstr ""
-#~ "Izaberite sliku koja će biti prikazana na ekranu za prijavljivanje za ovaj "
-#~ "nalog."
+#~ "Izaberite sliku koja će biti prikazana na ekranu za prijavljivanje za "
+#~ "ovaj nalog."
 
 #~ msgid "Gallery"
 #~ msgstr "Zbirka"

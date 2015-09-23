@@ -7976,7 +7976,6 @@ msgstr "Preferencias;Configuración;"
 #~ msgstr "Sin especificar"
 
 #, fuzzy
-#~| msgid "<b>Locate Pointer</b>"
 #~ msgid "<b>Remote Login</b>"
 #~ msgstr "<b>Localizar el puntero</b>"
 
