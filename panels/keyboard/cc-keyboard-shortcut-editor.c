@@ -40,12 +40,14 @@ struct _CcKeyboardShortcutEditor
   GtkWidget          *edit_button;
   GtkWidget          *headerbar;
   GtkWidget          *name_entry;
+  GtkWidget          *new_shortcut_accel_label;
   GtkWidget          *new_shortcut_conflict_label;
   GtkWidget          *remove_button;
   GtkWidget          *replace_button;
   GtkWidget          *reset_button;
   GtkWidget          *shortcut_accel_label;
   GtkWidget          *shortcut_conflict_label;
+  GtkWidget          *shortcut_grid;
   GtkWidget          *stack;
   GtkWidget          *top_info_label;
 
@@ -226,7 +228,7 @@ get_current_shortcut_label (CcKeyboardShortcutEditor *self)
   if (is_custom_shortcut (self))
     return GTK_SHORTCUT_LABEL (self->custom_shortcut_accel_label);
 
-  return GTK_SHORTCUT_LABEL (self->shortcut_accel_label);
+  return GTK_SHORTCUT_LABEL (self->new_shortcut_accel_label);
 }
 
 static void
@@ -261,6 +263,8 @@ setup_custom_shortcut (CcKeyboardShortcutEditor *self)
 
   gtk_widget_set_sensitive (self->add_button, valid);
 
+  gtk_widget_show (self->shortcut_grid);
+
   if (!valid)
     return;
 
@@ -274,9 +278,11 @@ setup_custom_shortcut (CcKeyboardShortcutEditor *self)
 
   accel = gtk_accelerator_name (self->custom_keyval, self->custom_mask);
 
-
   /* Setup the accelerator label */
   gtk_shortcut_label_set_accelerator (shortcut_label, accel);
+
+  if (self->mode == CC_SHORTCUT_EDITOR_EDIT)
+    gtk_widget_set_visible (self->new_shortcut_accel_label, accel != NULL && *accel != '\0');
 
   /*
    * When the user finishes typing the new shortcut, it gets immediately
@@ -439,6 +445,7 @@ setup_keyboard_item (CcKeyboardShortcutEditor *self,
   gtk_widget_hide (self->add_button);
   gtk_widget_hide (self->cancel_button);
   gtk_widget_hide (self->replace_button);
+  gtk_widget_hide (self->new_shortcut_accel_label);
 
   /* Setup the top label */
   text = g_strdup_printf (_("Enter new shortcut to change <b>%s</b>."), item->description);
@@ -455,6 +462,8 @@ setup_keyboard_item (CcKeyboardShortcutEditor *self,
                                                      self->reset_button,
                                                      "visible",
                                                      G_BINDING_DEFAULT | G_BINDING_INVERT_BOOLEAN | G_BINDING_SYNC_CREATE);
+
+  gtk_widget_hide (self->shortcut_grid);
 
   /* Setup the custom entries */
   if (is_custom)
@@ -579,16 +588,11 @@ cc_keyboard_shortcut_editor_key_press_event (GtkWidget   *widget,
       self->custom_keyval = 0;
       self->custom_mask = 0;
 
-      if (self->item)
-        apply_custom_item_fields (self, self->item);
-
       gtk_shortcut_label_set_accelerator (GTK_SHORTCUT_LABEL (self->custom_shortcut_accel_label), "");
-      gtk_shortcut_label_set_accelerator (GTK_SHORTCUT_LABEL (self->shortcut_accel_label), "");
+      gtk_shortcut_label_set_accelerator (GTK_SHORTCUT_LABEL (self->new_shortcut_accel_label), "");
 
       gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (self->edit_button), FALSE);
       release_grab (self);
-
-      self->edited = FALSE;
 
       return GDK_EVENT_STOP;
     }
@@ -682,12 +686,14 @@ cc_keyboard_shortcut_editor_class_init (CcKeyboardShortcutEditorClass *klass)
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, edit_button);
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, headerbar);
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, name_entry);
+  gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, new_shortcut_accel_label);
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, new_shortcut_conflict_label);
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, remove_button);
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, replace_button);
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, reset_button);
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, shortcut_accel_label);
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, shortcut_conflict_label);
+  gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, shortcut_grid);
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, stack);
   gtk_widget_class_bind_template_child (widget_class, CcKeyboardShortcutEditor, top_info_label);
 
