@@ -61,7 +61,6 @@ struct _CcMousePropertiesPrivate
 	gboolean have_mouse;
 	gboolean have_touchpad;
 	gboolean have_touchscreen;
-	gboolean have_synaptics;
 
 	gboolean left_handed;
 	GtkGesture *left_gesture;
@@ -80,10 +79,6 @@ setup_touchpad_options (CcMousePropertiesPrivate *d)
 	gboolean have_two_finger_scrolling;
 	gboolean have_edge_scrolling;
 	gboolean have_tap_to_click;
-
-	gtk_widget_set_visible (WID ("touchpad-frame"), !d->have_synaptics);
-	if (d->have_synaptics)
-		return;
 
 	gtk_widget_set_visible (WID ("touchpad-frame"), d->have_touchpad);
 	if (!d->have_touchpad)
@@ -387,11 +382,8 @@ cc_mouse_properties_init (CcMouseProperties *object)
 						 G_CALLBACK (device_changed), d);
 
 	d->have_mouse = mouse_is_present ();
-	d->have_touchpad = touchpad_is_present ();
+	d->have_touchpad = touchpad_is_present () || cc_synaptics_check ();
 	d->have_touchscreen = touchscreen_is_present ();
-	d->have_synaptics = cc_synaptics_check ();
-	if (d->have_synaptics)
-		g_warning ("Detected synaptics X driver, please migrate to libinput");
 
 	d->changing_scroll = FALSE;
 

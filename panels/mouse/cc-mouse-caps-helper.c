@@ -25,9 +25,72 @@
 #include "cc-mouse-caps-helper.h"
 
 static gboolean
-touchpad_check_capabilities_x11 (gboolean *have_two_finger_scrolling,
-                                 gboolean *have_edge_scrolling,
-                                 gboolean *have_tap_to_click)
+touchpad_check_capabilities_x11_synaptics (gboolean *have_two_finger_scrolling,
+                                           gboolean *have_edge_scrolling,
+                                           gboolean *have_tap_to_click)
+{
+        Display *display;
+	GList *devicelist, *l;
+	Atom realtype, prop_two_finger_scroll, prop_edge_scroll, prop_tap_action;
+	int realformat;
+	unsigned long nitems, bytes_after;
+	unsigned char *data;
+
+        display = GDK_DISPLAY_XDISPLAY (gdk_display_get_default ());
+	prop_two_finger_scroll = XInternAtom (display, "Synaptics Two-Finger Scrolling", False);
+        prop_edge_scroll = XInternAtom (display, "Synaptics Edge Scrolling", False);
+	prop_tap_action = XInternAtom (display, "Synaptics Tap Action", False);
+	if (!prop_two_finger_scroll || !prop_edge_scroll || !prop_tap_action)
+		return FALSE;
+
+	*have_two_finger_scrolling = FALSE;
+	*have_edge_scrolling = FALSE;
+	*have_tap_to_click = FALSE;
+
+        gdk_error_trap_push ();
+
+	devicelist = gdk_seat_get_slaves (gdk_display_get_default_seat (gdk_display_get_default ()),
+                                          GDK_SEAT_CAPABILITY_ALL_POINTING);
+	for (l = devicelist; l != NULL; l = l->next) {
+                GdkDevice *device = l->data;
+
+                if (gdk_device_get_source (device) != GDK_SOURCE_TOUCHPAD &&
+                    gdk_device_get_source (device) != GDK_SOURCE_MOUSE)
+			continue;
+
+		/* xorg-x11-drv-synaptics */
+		if ((XIGetProperty (display, gdk_x11_device_get_id (device), prop_two_finger_scroll,
+                                    0, 2, False, XA_INTEGER, &realtype, &realformat, &nitems,
+                                    &bytes_after, &data) == Success) && (realtype != None)) {
+                        *have_two_finger_scrolling = TRUE;
+			XFree (data);
+                }
+
+		if ((XIGetProperty (display, gdk_x11_device_get_id (device), prop_edge_scroll,
+                                    0, 3, False, XA_INTEGER, &realtype, &realformat, &nitems,
+                                    &bytes_after, &data) == Success) && (realtype != None)) {
+                        *have_edge_scrolling = TRUE;
+			XFree (data);
+                }
+
+		if ((XIGetProperty (display, gdk_x11_device_get_id (device), prop_tap_action,
+                                    0, 8, False, XA_INTEGER, &realtype, &realformat, &nitems,
+                                    &bytes_after, &data) == Success) && (realtype != None)) {
+                        *have_tap_to_click = TRUE;
+			XFree (data);
+                }
+	}
+        g_list_free (devicelist);
+
+        gdk_error_trap_pop_ignored ();
+
+	return TRUE;
+}
+
+static gboolean
+touchpad_check_capabilities_x11_libinput (gboolean *have_two_finger_scrolling,
+                                          gboolean *have_edge_scrolling,
+                                          gboolean *have_tap_to_click)
 {
         Display *display;
 	GList *devicelist, *l;
@@ -91,10 +154,18 @@ cc_touchpad_check_capabilities (gboolean *have_two_finger_scrolling,
                                 gboolean *have_edge_scrolling,
                                 gboolean *have_tap_to_click)
 {
-	if (GDK_IS_X11_DISPLAY (gdk_display_get_default ()))
-		return touchpad_check_capabilities_x11 (have_two_finger_scrolling,
-                                                        have_edge_scrolling,
-                                                        have_tap_to_click);
+	if (GDK_IS_X11_DISPLAY (gdk_display_get_default ())) {
+                if (cc_synaptics_check ()) {
+                        return touchpad_check_capabilities_x11_synaptics (have_two_finger_scrolling,
+                                                                          have_edge_scrolling,
+                                                                          have_tap_to_click);
+                }
+
+		return touchpad_check_capabilities_x11_libinput (have_two_finger_scrolling,
+                                                                 have_edge_scrolling,
+                                                                 have_tap_to_click);
+        }
+
 	/* else we unconditionally show all touchpad knobs */
         *have_two_finger_scrolling = TRUE;
         *have_edge_scrolling = TRUE;
