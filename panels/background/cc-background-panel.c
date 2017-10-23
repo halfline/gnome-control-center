@@ -721,25 +721,6 @@ create_view (GtkWidget *parent, GtkTreeModel *model)
   return sw;
 }
 
-static gboolean
-on_slides_draw (GtkWidget         *widget,
-                cairo_t           *cr,
-                CcBackgroundPanel *panel)
-{
-  GdkPixbuf *pixbuf;
-
-  g_print("Redraw: %s\n", gtk_widget_get_name(widget));
-  pixbuf = get_or_create_cached_pixbuf (panel, widget, panel->current_background);
-
-  cr = gdk_cairo_create (gtk_widget_get_window (widget));
-  gdk_cairo_set_source_pixbuf (cr,
-                               pixbuf,
-                               0, 0);
-  cairo_paint (cr);
-  cairo_destroy (cr);
-  return TRUE;
-}
-
 static void
 on_background_select (GtkFlowBox      *box,
                       GtkFlowBoxChild *child,
@@ -749,16 +730,15 @@ on_background_select (GtkFlowBox      *box,
   CcBackgroundPanel *panel = user_data;
   CcBackgroundItem *item;
   item = cc_background_grid_item_get_ref (selected);
-  g_print ("Background name %s\n", cc_background_item_get_name (item));
 
   set_background (panel, panel->settings, item);
 }
 
 gboolean
-foreach_background_item (GtkTreeModel *model,
-                            GtkTreePath *path,
-                            GtkTreeIter *iter,
-                            gpointer data)
+do_foreach_background_item (GtkTreeModel *model,
+                         GtkTreePath *path,
+                         GtkTreeIter *iter,
+                         gpointer data)
 {
   CcBackgroundPanel *panel = data;
   CcBackgroundGridItem *flow;
@@ -770,8 +750,6 @@ foreach_background_item (GtkTreeModel *model,
   const gint preview_height = 168;
 
   gtk_tree_model_get (model, iter, 1, &item, -1);
-  g_print("Number of devices %d\n", gtk_tree_model_iter_n_children (model, iter));
-  g_print ("Background name %s\n", cc_background_item_get_name (item));
 
   scale_factor = gtk_widget_get_scale_factor (panel);
 
@@ -782,11 +760,7 @@ foreach_background_item (GtkTreeModel *model,
                                                    scale_factor,
                                                    -2, TRUE);
 
-
-  //box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
   widget = gtk_image_new_from_pixbuf (pixbuf);
-  //gtk_widget_show_all (box);
-  //gtk_widget_show_all (widget);
 
   flow = cc_background_grid_item_new(item);
   cc_background_grid_item_set_ref (flow, item);
@@ -794,7 +768,6 @@ foreach_background_item (GtkTreeModel *model,
   gtk_widget_show (widget);
   gtk_container_add (flow, widget);
 
-  //gtk_box_pack_start (box, widget, FALSE, FALSE, 0);
   gtk_flow_box_insert (GTK_FLOW_BOX (WID("background-gallery")), flow, -1);
   return TRUE;
 }
@@ -806,11 +779,11 @@ on_source_added_cb (GtkTreeModel *model,
                     gpointer     user_data)
 {
   //gtk_tree_model_foreach (model, foreach_background_item, user_data);
-  foreach_background_item (model, path, iter, user_data);
+  do_foreach_background_item (model, path, iter, user_data);
 }
 
 static void
-cc_background_create_wallpapers (CcBackgroundPanel *panel, GtkWidget *parent)
+load_wallpapers (CcBackgroundPanel *panel, GtkWidget *parent)
 {
   GtkListStore *model;
   GtkTreeIter iter;
@@ -818,50 +791,16 @@ cc_background_create_wallpapers (CcBackgroundPanel *panel, GtkWidget *parent)
   GValue *value = NULL;
   gint scale_factor;
 
-
   scale_factor = gtk_widget_get_scale_factor (panel);
 
-  g_print("Scale_factor works %d\n", scale_factor);
   panel->wallpapers_source = bg_wallpapers_source_new (GTK_WINDOW (NULL));
   model = bg_source_get_liststore (BG_SOURCE (panel->wallpapers_source));
 
-  gtk_tree_model_foreach (model, foreach_background_item, panel);
+  gtk_tree_model_foreach (model, do_foreach_background_item, panel);
 
   g_signal_connect (model, "row-inserted", G_CALLBACK (on_source_added_cb), panel);
   //g_signal_connect (model, "row-deleted", G_CALLBACK (on_source_removed_cb), chooser);
   //g_signal_connect (model, "row-changed", G_CALLBACK (on_source_modified_cb), chooser);
-  //path = gtk_tree_path_new_first ();
-
-  //  path = gtk_tree_model_get (model, &iter, 1, &item, -1);
-  //if (gtk_tree_model_get_iter (model, &iter, (GtkTreePath*) path) == TRUE) {
-  //gtk_tree_model_get_value (model, &iter, 1, value);
-  //g_print (">>>>>>>>>>>>>>>>>>> %s", g_value_get_string(value));
-
-  //g_value_unset(value) ;
-  //}
-
-  /*
-     scale_factor = gtk_widget_get_scale_factor (panel);
-     for (int i = 0; i < 18; i++) {
-  //widget = gtk_drawing_area_new ();
-  box = gtk_box_new (GTK_ORIENTATION_VERTICAL, 0);
-  pixbuf = gdk_pixbuf_new_from_file ("/usr/share/backgrounds/gnome/adwaita-day.jpg", NULL);
-  pixbuf = gdk_pixbuf_scale_simple (pixbuf,
-  preview_width,
-  preview_height,
-  GDK_INTERP_BILINEAR);
-
-  //widget = gtk_image_new ();
-  //pixbuf = get_or_create_cached_pixbuf (panel, widget, panel->current_background);
-  widget = gtk_image_new_from_pixbuf (pixbuf);
-
-  gtk_box_pack_start (box, widget, FALSE, FALSE, 0);
-  gtk_flow_box_insert (GTK_FLOW_BOX (parent), box, -1);
-  //g_signal_connect (G_OBJECT (widget), "draw",
-  //                G_CALLBACK (on_slides_draw), panel);
-
-  }
-  */
 }
 
 static void
@@ -897,7 +836,7 @@ cc_background_panel_init (CcBackgroundPanel *panel)
   gtk_container_add (GTK_CONTAINER (panel), widget);
   gtk_widget_show_all (GTK_WIDGET (panel));
 
-  /* add border to background preview */
+  /* add style */
   widget = WID ("background-preview-top");
   provider = GTK_STYLE_PROVIDER (gtk_css_provider_new ());
   gtk_css_provider_load_from_resource (provider,
@@ -916,14 +855,13 @@ cc_background_panel_init (CcBackgroundPanel *panel)
 
   panel->thumb_factory = gnome_desktop_thumbnail_factory_new (GNOME_DESKTOP_THUMBNAIL_SIZE_LARGE);
 
-/* add the gallery widget */
+  /* add the gallery widget */
   widget = WID ("background-gallery");
 
   g_signal_connect (G_OBJECT (widget), "child-activated",
                     G_CALLBACK (on_background_select), panel);
 
-  cc_background_create_wallpapers (panel, widget);
-
+  load_wallpapers (panel, widget);
 
   /* Load the backgrounds */
   reload_current_bg (panel, panel->settings);
