@@ -278,8 +278,9 @@ cc_night_light_widget_draw (GtkWidget *widget, cairo_t *cr)
   gdouble subsect = 24.f / (gdouble) rect.width;
   if (gtk_widget_is_sensitive (widget))
     {
+      guint x;
       cairo_set_line_width (cr, 1);
-      for (guint x = 0; x < rect.width; x += 1)
+      for (x = 0; x < rect.width; x += 1)
         {
           gdouble frac_hour = subsect * x;
           if (is_frac_day_between (frac_hour, self->to - 1, self->to))
