@@ -555,7 +555,7 @@ print_file_thread (GTask        *task,
     {
       if (ippGetState (response) == IPP_ERROR)
         g_warning ("An error has occured during printing of test page.");
-      if (ippGetState (response) == IPP_STATE_IDLE)
+      if (ippGetState (response) == IPP_IDLE)
         ret = TRUE;
 
       ippDelete (response);
