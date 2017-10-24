@@ -10,13 +10,13 @@
 
 Name: control-center
 Epoch: 1
-Version: 3.26.0
+Version: 3.25.91
 Release: 1%{?dist}
 Summary: Utilities to configure the GNOME desktop
 
 License: GPLv2+ and GFDL
 URL: http://www.gnome.org
-Source0: https://download.gnome.org/sources/gnome-control-center/3.26/gnome-control-center-%{version}.tar.xz
+Source0: https://download.gnome.org/sources/gnome-control-center/3.25/gnome-control-center-%{version}.tar.xz
 
 # https://bugzilla.gnome.org/show_bug.cgi?id=695691
 Patch0: distro-logo.patch
@@ -221,12 +221,6 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
-* Wed Sep 13 2017 Kalev Lember <klember@redhat.com> - 1:3.26.0-1
-- Update to 3.26.0
-
-* Tue Sep 05 2017 Kalev Lember <klember@redhat.com> - 1:3.25.92.1-1
-- Update to 3.25.92.1
-
 * Thu Aug 24 2017 Kalev Lember <klember@redhat.com> - 1:3.25.91-1
 - Update to 3.25.91
 
