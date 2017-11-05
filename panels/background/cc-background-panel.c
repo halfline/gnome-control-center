@@ -24,6 +24,7 @@
 #include <glib.h>
 #include <glib/gi18n-lib.h>
 #include <glib/gstdio.h>
+#include <gio/gdesktopappinfo.h>
 
 #include <gdesktop-enums.h>
 
@@ -736,9 +737,9 @@ on_background_select (GtkFlowBox      *box,
 
 gboolean
 do_foreach_background_item (GtkTreeModel *model,
-                         GtkTreePath *path,
-                         GtkTreeIter *iter,
-                         gpointer data)
+                            GtkTreePath *path,
+                            GtkTreeIter *iter,
+                            gpointer data)
 {
   CcBackgroundPanel *panel = data;
   CcBackgroundGridItem *flow;
@@ -783,7 +784,94 @@ on_source_added_cb (GtkTreeModel *model,
 }
 
 static void
-load_wallpapers (CcBackgroundPanel *panel, GtkWidget *parent)
+on_open_gnome_photos (GtkWidget *widget,
+                      gpointer  user_data)
+{
+  GdkAppLaunchContext *context;
+  GDesktopAppInfo *appInfo;
+  GError **error = NULL;
+
+  context = gdk_display_get_app_launch_context (gdk_display_get_default ());
+  appInfo = g_desktop_app_info_new("org.gnome.Photos.desktop");
+
+  g_object_unref (context);
+
+  if (appInfo == NULL) {
+    g_debug ("Gnome Photos is not installed.");
+  }
+  else {
+    g_app_info_launch (appInfo, NULL, context, error);
+    g_prefix_error (error,
+                    ("Problem opening Gnome Photos: "));
+
+    g_object_unref (appInfo);
+  }
+}
+
+static void
+on_open_picture_folder (GtkWidget *widget,
+                        gpointer  user_data)
+{
+  GDBusProxy      *proxy;
+  GVariant        *retval;
+  GVariantBuilder *builder;
+  const gchar     *uri;
+  GError **error = NULL;
+  const gchar     *path;
+
+  path = g_get_user_special_dir (G_USER_DIRECTORY_PICTURES);
+
+  uri = g_filename_to_uri (path, NULL, error);
+
+  proxy = g_dbus_proxy_new_for_bus_sync (G_BUS_TYPE_SESSION,
+                                         G_DBUS_PROXY_FLAGS_NONE,
+                                         NULL,
+                                         "org.freedesktop.FileManager1",
+                                         "/org/freedesktop/FileManager1",
+                                         "org.freedesktop.FileManager1",
+                                         NULL, error);
+
+  if (!proxy) {
+    g_prefix_error (error,
+                    ("Connecting to org.freedesktop.FileManager1 failed: "));
+  }
+  else {
+
+    builder = g_variant_builder_new (G_VARIANT_TYPE ("as"));
+    g_variant_builder_add (builder, "s", uri);
+
+    retval = g_dbus_proxy_call_sync (proxy,
+                                     "ShowFolders",
+                                     g_variant_new ("(ass)",
+                                                    builder,
+                                                    ""),
+                                     G_DBUS_CALL_FLAGS_NONE,
+                                     -1, NULL, error);
+
+    g_variant_builder_unref (builder);
+    g_object_unref (proxy);
+
+    if (!retval)
+      {
+        g_prefix_error (error, ("Calling ShowFolders failed: "));
+      }
+    else
+      g_variant_unref (retval);
+  }
+}
+
+static gboolean
+is_gnome_photos_installed ()
+{
+  if (g_desktop_app_info_new("org.gnome.Photos.desktop") == NULL) {
+    return FALSE;
+  }
+  return TRUE;
+}
+
+static void
+load_wallpapers (CcBackgroundPanel *panel,
+                 GtkWidget *parent)
 {
   GtkListStore *model;
   GtkTreeIter iter;
@@ -854,6 +942,20 @@ cc_background_panel_init (CcBackgroundPanel *panel)
   panel->copy_cancellable = g_cancellable_new ();
 
   panel->thumb_factory = gnome_desktop_thumbnail_factory_new (GNOME_DESKTOP_THUMBNAIL_SIZE_LARGE);
+
+
+  /* add button handler */
+  widget = WID ("open-gnome-photos");
+  g_signal_connect (G_OBJECT (widget), "clicked",
+                    G_CALLBACK (on_open_gnome_photos), panel);
+
+  if (!is_gnome_photos_installed ()) {
+    gtk_widget_hide (widget);
+  }
+
+  widget = WID ("open-picture-folder");
+  g_signal_connect (G_OBJECT (widget), "clicked",
+                    G_CALLBACK (on_open_picture_folder), panel);
 
   /* add the gallery widget */
   widget = WID ("background-gallery");
