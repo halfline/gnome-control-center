@@ -86,6 +86,8 @@ cc_background_panel_dispose (GObject *object)
   /* destroying the builder object will also destroy the spinner */
   panel->spinner = NULL;
 
+  g_clear_object (&panel->settings);
+
   if (panel->copy_cancellable)
     {
       /* cancel any copy operation */
@@ -115,7 +117,6 @@ cc_background_panel_finalize (GObject *object)
 
   g_clear_object (&panel->current_background);
   g_clear_object (&panel->store);
-  g_clear_object (&panel->settings);
 
   G_OBJECT_CLASS (cc_background_panel_parent_class)->finalize (object);
 }
@@ -188,11 +189,13 @@ get_or_create_cached_pixbuf (CcBackgroundPanel *panel,
                              CcBackgroundItem  *background)
 {
   GtkAllocation allocation;
-  const gint preview_width = 309;
-  const gint preview_height = 168;
+
+  //const gint preview_width;// = 310; //309
+  //const gint preview_height;// = 174; //168
   gint scale_factor;
   GdkPixbuf *pixbuf;
-  GdkPixbuf *pixbuf_tmp;
+  const gint preview_width = gtk_widget_get_allocated_width (widget);
+  const gint preview_height = gtk_widget_get_allocated_height (widget);
 
   pixbuf = g_object_get_data (G_OBJECT (background), "pixbuf");
   if (pixbuf == NULL)
@@ -247,7 +250,19 @@ update_display_preview (CcBackgroundPanel *panel,
 
   pixbuf = get_or_create_cached_pixbuf (panel, widget, background);
 
-  cr = gdk_cairo_create (gtk_widget_get_window (widget));
+  const gint width = gtk_widget_get_allocated_width (panel);
+  const gint height = gtk_widget_get_allocated_height (panel);
+  if (height < 500) {
+    gtk_widget_set_size_request (widget, 200, 200*9/16);
+  }
+
+  else if (height > 500) {
+    gtk_widget_set_size_request (widget, 310, 170);
+  }
+
+  pixbuf = get_or_create_cached_pixbuf (panel,
+                                        widget,
+                                        panel->current_background);
   gdk_cairo_set_source_pixbuf (cr,
                                pixbuf,
                                0, 0);
@@ -424,6 +439,15 @@ on_preview_draw (GtkWidget         *widget,
   else
     update_display_preview (panel, widget, panel->current_background);
 
+  return TRUE;
+}
+
+static gboolean
+resize_preview (GtkWidget *widget,
+               GdkEvent  *event,
+               gpointer   user_data)
+{
+  g_print ("run me");
   return TRUE;
 }
 
@@ -793,9 +817,17 @@ is_gnome_photos_installed ()
   return TRUE;
 }
 
+static void
+on_window_resize (GtkWidget    *widget,
+                  GdkRectangle *allocation,
+                  gpointer      user_data)
+{
+  g_print ("New size\n");
+}
+
 static GtkWidget *
 create_gallery_item (gpointer item,
-                    gpointer user_data)
+                     gpointer user_data)
 {
   CcBackgroundPanel *panel = user_data;
   GtkWidget *flow;
@@ -911,4 +943,5 @@ cc_background_panel_init (CcBackgroundPanel *panel)
 
   /* Background settings */
   g_signal_connect (panel->settings, "changed", G_CALLBACK (on_settings_changed), panel);
+  g_signal_connect (panel, "configure-event", G_CALLBACK (resize_preview), panel);
 }
