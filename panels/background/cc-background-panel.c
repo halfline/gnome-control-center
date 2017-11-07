@@ -190,8 +190,8 @@ get_or_create_cached_pixbuf (CcBackgroundPanel *panel,
 {
   GtkAllocation allocation;
 
-  //const gint preview_width;// = 310; //309
-  //const gint preview_height;// = 174; //168
+  //const gint preview_width = 310; //309
+  //const gint preview_height = 174; //168
   gint scale_factor;
   GdkPixbuf *pixbuf;
   const gint preview_width = gtk_widget_get_allocated_width (widget);
@@ -208,33 +208,6 @@ get_or_create_cached_pixbuf (CcBackgroundPanel *panel,
                                                        preview_height,
                                                        scale_factor,
                                                        -2, TRUE);
-
-      if (background == panel->current_background &&
-          panel->display_screenshot != NULL)
-        {
-          /* we need to add an alpha channel for for copy aera */ 
-          pixbuf = gdk_pixbuf_add_alpha (pixbuf, FALSE, 0,0,0);
-
-          pixbuf_tmp = gdk_pixbuf_scale_simple (panel->display_screenshot,
-                                                preview_width,
-                                                (preview_width
-                                                 * gdk_pixbuf_get_height (panel->display_screenshot) 
-                                                 / gdk_pixbuf_get_width(panel->display_screenshot)),
-                                                GDK_INTERP_BILINEAR);
-
-          gdk_pixbuf_copy_area (pixbuf_tmp,
-                                0,
-                                0,
-                                preview_width,
-                                gdk_pixbuf_get_height(pixbuf_tmp),
-                                pixbuf,
-                                0,
-                                0);
-
-          g_object_unref (pixbuf_tmp);
-        }
-
-      g_object_set_data_full (G_OBJECT (background), "pixbuf", pixbuf, g_object_unref);
     }
 
   return pixbuf;
@@ -249,16 +222,6 @@ update_display_preview (CcBackgroundPanel *panel,
   cairo_t *cr;
 
   pixbuf = get_or_create_cached_pixbuf (panel, widget, background);
-
-  const gint width = gtk_widget_get_allocated_width (panel);
-  const gint height = gtk_widget_get_allocated_height (panel);
-  if (height < 500) {
-    gtk_widget_set_size_request (widget, 200, 200*9/16);
-  }
-
-  else if (height > 500) {
-    gtk_widget_set_size_request (widget, 310, 170);
-  }
 
   pixbuf = get_or_create_cached_pixbuf (panel,
                                         widget,
@@ -439,15 +402,6 @@ on_preview_draw (GtkWidget         *widget,
   else
     update_display_preview (panel, widget, panel->current_background);
 
-  return TRUE;
-}
-
-static gboolean
-resize_preview (GtkWidget *widget,
-               GdkEvent  *event,
-               gpointer   user_data)
-{
-  g_print ("run me");
   return TRUE;
 }
 
@@ -817,14 +771,6 @@ is_gnome_photos_installed ()
   return TRUE;
 }
 
-static void
-on_window_resize (GtkWidget    *widget,
-                  GdkRectangle *allocation,
-                  gpointer      user_data)
-{
-  g_print ("New size\n");
-}
-
 static GtkWidget *
 create_gallery_item (gpointer item,
                      gpointer user_data)
@@ -943,5 +889,4 @@ cc_background_panel_init (CcBackgroundPanel *panel)
 
   /* Background settings */
   g_signal_connect (panel->settings, "changed", G_CALLBACK (on_settings_changed), panel);
-  g_signal_connect (panel, "configure-event", G_CALLBACK (resize_preview), panel);
 }

@@ -11,31 +11,43 @@
         <property name="visible">True</property>
         <property name="can_focus">False</property>
         <property name="margin">16</property>
-        <property name="halign">center</property>
+        <property name="halign">fill</property>
         <property name="orientation">vertical</property>
-        <property name="expand">False</property>
+        <property name="expand">True</property>
+        <property name="height_request">100</property>
         <child>
-          <object class="GtkBox" id="background-preview-top">
+          <object class="GtkAspectFrame">
             <property name="visible">True</property>
             <property name="can_focus">False</property>
-            <property name="margin">6</property>
-            <property name="spacing">6</property>
-            <property name="orientation">vertical</property>
-            <style>
-              <class name="black-border"/>
-            </style>
+            <property name="shadow_type">GTK_SHADOW_NONE</property>
+            <property name="expand">True</property>
+            <property name="obey-child">False</property>
+            <property name="ratio">1.7777</property>
             <child>
-              <object class="GtkDrawingArea" id="background-desktop-drawingarea">
-                <property name="width_request">310</property>
-                <property name="height_request">170</property>
+              <object class="GtkBox" id="background-preview-top">
                 <property name="visible">True</property>
                 <property name="can_focus">False</property>
-                <property name="valign">center</property>
-                <property name="hexpand">True</property>
-                <property name="vexpand">True</property>
+                <property name="margin">6</property>
+                <property name="spacing">6</property>
+                <property name="orientation">vertical</property>
+                <style>
+                  <class name="black-border"/>
+                </style>
+                <child>
+                  <object class="GtkDrawingArea" id="background-desktop-drawingarea">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <property name="expand">True</property>
+                  </object>
+                </child>
               </object>
             </child>
           </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
         </child>
         <child>
           <object class="GtkBox" id="bottom-hbox">
@@ -111,6 +123,8 @@
       <object class="GtkBox" id="backgroud-gallery-box">
         <property name="visible">True</property>
         <property name="can_focus">False</property>
+        <property name="expand">True</property>
+        <property name="height_request">450</property>
         <style>
           <class name="background-gallery"/>
         </style>
