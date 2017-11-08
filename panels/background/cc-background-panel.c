@@ -167,8 +167,8 @@ update_preview (CcBackgroundPanel *panel,
       changes_with_time = cc_background_item_changes_with_time (current_background);
     }
 
-  gtk_widget_set_visible (WID ("slide_image"), changes_with_time);
-  gtk_widget_set_visible (WID ("slide-label"), changes_with_time);
+  gtk_revealer_set_reveal_child (GTK_REVEALER (WID ("wallpaper-info")),
+                                 changes_with_time);
 
   gtk_widget_queue_draw (WID ("background-desktop-drawingarea"));
 }
@@ -202,16 +202,16 @@ get_or_create_cached_pixbuf (CcBackgroundPanel *panel,
       gdk_pixbuf_get_width (pixbuf) != preview_width ||
       gdk_pixbuf_get_height (pixbuf) != preview_height) {
 
-      gtk_widget_get_allocation (widget, &allocation);
-      scale_factor = gtk_widget_get_scale_factor (widget);
-      pixbuf = cc_background_item_get_frame_thumbnail (background,
-                                                       panel->thumb_factory,
-                                                       preview_width,
-                                                       preview_height,
-                                                       scale_factor,
-                                                       -2, TRUE);
-      g_object_set_data_full (G_OBJECT (background), "pixbuf", pixbuf, g_object_unref);
-    }
+    gtk_widget_get_allocation (widget, &allocation);
+    scale_factor = gtk_widget_get_scale_factor (widget);
+    pixbuf = cc_background_item_get_frame_thumbnail (background,
+                                                     panel->thumb_factory,
+                                                     preview_width,
+                                                     preview_height,
+                                                     scale_factor,
+                                                     -2, TRUE);
+    g_object_set_data_full (G_OBJECT (background), "pixbuf", pixbuf, g_object_unref);
+  }
 
   return pixbuf;
 }
@@ -222,9 +222,26 @@ update_display_preview (CcBackgroundPanel *panel,
                         CcBackgroundItem  *background)
 {
   GdkPixbuf *pixbuf;
-  cairo_t *cr;
+  const gint width = gtk_widget_get_allocated_width (panel);
+  gint height  = gtk_widget_get_allocated_height (panel);
+  gint request_height;
+  const gint preview_width = gtk_widget_get_allocated_width (widget);
+  const gint preview_height = gtk_widget_get_allocated_height (widget);
+  /*g_print ("Height %d", height);
+  if (preview_width > 310) {
+    gtk_widget_set_vexpand (WID ("background-preview"), FALSE);
+    gtk_widget_set_size_request (widget, 310, preview_height);
+  }
+  else {
+    gtk_widget_set_vexpand (WID ("background-preview"), TRUE);
+    gtk_widget_set_size_request (widget, -1, -1);
+  }
+  */
 
-  pixbuf = get_or_create_cached_pixbuf (panel, widget, background);
+  /*gtk_widget_get_size_request (WID ("background-gallery-box"), NULL, &request_height);
+  g_print ("Height %d\n", height);
+  gtk_widget_set_size_request (WID ("background-gallery-box"), -1, height - 300);
+  */
 
   pixbuf = get_or_create_cached_pixbuf (panel,
                                         widget,
