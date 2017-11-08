@@ -815,8 +815,8 @@ add_slideshow_emblem (GdkPixbuf *pixbuf,
       ew = gdk_pixbuf_get_width (slideshow_emblem);
       h = gdk_pixbuf_get_height (pixbuf);
       w = gdk_pixbuf_get_width (pixbuf);
-      x = w - ew;
-      y = h - eh;
+      x = w - ew - 5;
+      y = h - eh - 5;
 
       gdk_pixbuf_composite (slideshow_emblem, pixbuf, x, y, ew, eh, x, y, 1.0, 1.0, GDK_INTERP_BILINEAR, 255);
     }
