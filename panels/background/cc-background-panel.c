@@ -57,6 +57,7 @@ struct _CcBackgroundPanel
 
   CcBackgroundItem *current_background;
   CcBackgroundStore *store;
+  gint gallery_size;
 
   GCancellable *copy_cancellable;
 
@@ -222,26 +223,6 @@ update_display_preview (CcBackgroundPanel *panel,
                         CcBackgroundItem  *background)
 {
   GdkPixbuf *pixbuf;
-  const gint width = gtk_widget_get_allocated_width (panel);
-  gint height  = gtk_widget_get_allocated_height (panel);
-  gint request_height;
-  const gint preview_width = gtk_widget_get_allocated_width (widget);
-  const gint preview_height = gtk_widget_get_allocated_height (widget);
-  /*g_print ("Height %d", height);
-  if (preview_width > 310) {
-    gtk_widget_set_vexpand (WID ("background-preview"), FALSE);
-    gtk_widget_set_size_request (widget, 310, preview_height);
-  }
-  else {
-    gtk_widget_set_vexpand (WID ("background-preview"), TRUE);
-    gtk_widget_set_size_request (widget, -1, -1);
-  }
-  */
-
-  /*gtk_widget_get_size_request (WID ("background-gallery-box"), NULL, &request_height);
-  g_print ("Height %d\n", height);
-  gtk_widget_set_size_request (WID ("background-gallery-box"), -1, height - 300);
-  */
 
   pixbuf = get_or_create_cached_pixbuf (panel,
                                         widget,
@@ -349,6 +330,47 @@ calculate_contiguous_workarea (ScreenshotData *data)
   return TRUE;
 }
 
+static gboolean
+on_gallery_item_draw (GtkWidget         *widget,
+                      cairo_t           *cr,
+                      GdkPixbuf *pixbuf)
+{
+  const gint width = gtk_widget_get_allocated_width (gtk_widget_get_parent (widget));
+  const gint height = gtk_widget_get_allocated_height (gtk_widget_get_parent (widget));
+
+  pixbuf = gdk_pixbuf_scale_simple (pixbuf,
+                                    width,
+                                    height,
+                                    GDK_INTERP_BILINEAR);
+  gdk_cairo_set_source_pixbuf (cr,
+                               pixbuf,
+                               0, 0);
+  cairo_paint (cr);
+
+  return TRUE;
+}
+
+
+static void
+on_panel_resize (GtkWidget *widget,
+                 GdkRectangle *allocation,
+                 gpointer      user_data)
+{
+  CcBackgroundPanel *panel = CC_BACKGROUND_PANEL (user_data);
+  GtkWidget *preview = WID ("background-preview");
+
+  if (allocation->height > 700) {
+    gtk_widget_set_size_request (preview, -1, 200);
+  }
+  else {
+    gtk_widget_set_size_request (preview, -1, 150);
+  }
+
+  if (allocation->width < 400) {
+    panel->gallery_size = 10;
+  }
+}
+
 static void
 get_screenshot_async (CcBackgroundPanel *panel)
 {
@@ -424,6 +446,23 @@ on_preview_draw (GtkWidget         *widget,
 
   return TRUE;
 }
+
+static void
+on_panel_resize (GtkWidget *widget,
+                 GdkRectangle *allocation,
+                 gpointer      user_data)
+{
+  CcBackgroundPanel *panel = CC_BACKGROUND_PANEL (user_data);
+  GtkWidget *preview = WID ("background-preview");
+
+  if (allocation->height > 700) {
+    gtk_widget_set_size_request (preview, -1, 200);
+  }
+  else {
+    gtk_widget_set_size_request (preview, -1, 150);
+  }
+}
+
 
 static void
 reload_current_bg (CcBackgroundPanel *panel,
@@ -851,11 +890,12 @@ create_gallery_item (gpointer item,
   CcBackgroundPanel *panel = user_data;
   GtkWidget *flow;
   GtkWidget *widget;
+  GtkWidget *frame;
   GdkPixbuf *pixbuf;
   CcBackgroundItem *self = item;
   gint scale_factor;
-  const gint preview_width = 309;
-  const gint preview_height = 168;
+  const gint preview_width = 400;//panel->gallery_size;//309;
+  const gint preview_height = 400 * 9 / 16; //panel->gallery_size * 9/16;//168;
 
   scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (panel));
 
@@ -866,17 +906,40 @@ create_gallery_item (gpointer item,
                                                    scale_factor,
                                                    -2, TRUE);
 
-
   if (cc_background_item_changes_with_time (self)) {
     add_slideshow_emblem (pixbuf, scale_factor);
   }
-  widget = gtk_image_new_from_pixbuf (pixbuf);
+  //widget = gtk_image_new_from_pixbuf (pixbuf);
+  widget = gtk_drawing_area_new ();
+  gtk_widget_set_size_request (widget, 200, 200 * 9/16);
+  gtk_widget_set_hexpand(widget, TRUE);
+  gtk_widget_set_vexpand(widget, TRUE);
+  g_signal_connect (G_OBJECT (widget), "draw",
+                    G_CALLBACK (on_gallery_item_draw), pixbuf);
 
   flow = cc_background_grid_item_new(self);
   cc_background_grid_item_set_ref (flow, self);
   gtk_widget_show (flow);
   gtk_widget_show (widget);
+  /*frame = gtk_aspect_frame_new (NULL,
+    0.5,
+    0.5,
+    1.7777,
+    FALSE);
+
+    gtk_widget_set_size_request (frame, preview_width, -1);
+    gtk_frame_set_shadow_type (frame,
+    GTK_SHADOW_NONE);
+    gtk_container_add (GTK_CONTAINER (frame), widget);
+
+
+    gtk_widget_show (frame);
+    gtk_container_add (GTK_CONTAINER (flow), frame);
+
+*/
+
   gtk_container_add (GTK_CONTAINER (flow), widget);
+
 
   return flow;
 }
@@ -892,6 +955,7 @@ cc_background_panel_init (CcBackgroundPanel *panel)
 
   /* Create wallpapers store */
   panel->store = cc_background_store_new ();
+  panel->gallery_size = 300;
 
   panel->connection = g_application_get_dbus_connection (g_application_get_default ());
   g_resources_register (cc_background_get_resource ());
@@ -929,6 +993,9 @@ cc_background_panel_init (CcBackgroundPanel *panel)
   /* setup preview area */
   widget = WID ("background-desktop-drawingarea");
   g_signal_connect (widget, "draw", G_CALLBACK (on_preview_draw), panel);
+
+  /* Add handler for resizing the preview */
+  g_signal_connect (panel, "size-allocate", G_CALLBACK (on_panel_resize), panel);
 
   panel->copy_cancellable = g_cancellable_new ();
 
