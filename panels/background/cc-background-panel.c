@@ -335,16 +335,32 @@ on_gallery_item_draw (GtkWidget         *widget,
                       cairo_t           *cr,
                       GdkPixbuf *pixbuf)
 {
-  const gint width = gtk_widget_get_allocated_width (gtk_widget_get_parent (widget));
-  const gint height = gtk_widget_get_allocated_height (gtk_widget_get_parent (widget));
+  const gint space_width = gtk_widget_get_allocated_width (widget);
+  const gint space_height = gtk_widget_get_allocated_height ( (widget));
+  //g_print ("Parent name %s\n", gtk_widget_get_name (gtk_widget_get_parent (widget)));
+
+  const gint pixbuf_width = gdk_pixbuf_get_width (pixbuf);
+  const gint pixbuf_height = gdk_pixbuf_get_height (pixbuf);
+
+  gint new_width;
+  gint new_height;
+  if (space_width * 9/16 > space_height) {
+    new_width = space_width;
+    new_height = space_width * 9/16;
+  }
+  else {
+    new_width = space_height * 16/9;
+    new_height = space_height;
+  }
 
   pixbuf = gdk_pixbuf_scale_simple (pixbuf,
-                                    width,
-                                    height,
+                                    new_width,
+                                    new_height,
                                     GDK_INTERP_BILINEAR);
+
   gdk_cairo_set_source_pixbuf (cr,
                                pixbuf,
-                               0, 0);
+                               -(new_width - space_width)/2, -(new_height - space_height)/2);
   cairo_paint (cr);
 
   return TRUE;
@@ -894,8 +910,8 @@ create_gallery_item (gpointer item,
   GdkPixbuf *pixbuf;
   CcBackgroundItem *self = item;
   gint scale_factor;
-  const gint preview_width = 400;//panel->gallery_size;//309;
-  const gint preview_height = 400 * 9 / 16; //panel->gallery_size * 9/16;//168;
+  const gint preview_width = 800;//panel->gallery_size;//309;
+  const gint preview_height = 800 * 9 / 16; //panel->gallery_size * 9/16;//168;
 
   scale_factor = gtk_widget_get_scale_factor (GTK_WIDGET (panel));
 
@@ -918,6 +934,8 @@ create_gallery_item (gpointer item,
                     G_CALLBACK (on_gallery_item_draw), pixbuf);
 
   flow = cc_background_grid_item_new(self);
+
+  gtk_widget_set_size_request (flow, 200, 150);
   cc_background_grid_item_set_ref (flow, self);
   gtk_widget_show (flow);
   gtk_widget_show (widget);
