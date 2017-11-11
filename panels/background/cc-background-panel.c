@@ -337,13 +337,11 @@ on_gallery_item_draw (GtkWidget         *widget,
 {
   const gint space_width = gtk_widget_get_allocated_width (widget);
   const gint space_height = gtk_widget_get_allocated_height ( (widget));
-  //g_print ("Parent name %s\n", gtk_widget_get_name (gtk_widget_get_parent (widget)));
-
   const gint pixbuf_width = gdk_pixbuf_get_width (pixbuf);
   const gint pixbuf_height = gdk_pixbuf_get_height (pixbuf);
-
   gint new_width;
   gint new_height;
+
   if (space_width * 9/16 > space_height) {
     new_width = space_width;
     new_height = space_width * 9/16;
@@ -925,9 +923,8 @@ create_gallery_item (gpointer item,
   if (cc_background_item_changes_with_time (self)) {
     add_slideshow_emblem (pixbuf, scale_factor);
   }
-  //widget = gtk_image_new_from_pixbuf (pixbuf);
   widget = gtk_drawing_area_new ();
-  gtk_widget_set_size_request (widget, 200, 200 * 9/16);
+  gtk_widget_set_size_request (widget, 250, 250 * 9/16);
   gtk_widget_set_hexpand(widget, TRUE);
   gtk_widget_set_vexpand(widget, TRUE);
   g_signal_connect (G_OBJECT (widget), "draw",
@@ -935,29 +932,11 @@ create_gallery_item (gpointer item,
 
   flow = cc_background_grid_item_new(self);
 
-  gtk_widget_set_size_request (flow, 200, 150);
+  gtk_widget_set_size_request (flow, 250, 200);
   cc_background_grid_item_set_ref (flow, self);
   gtk_widget_show (flow);
   gtk_widget_show (widget);
-  /*frame = gtk_aspect_frame_new (NULL,
-    0.5,
-    0.5,
-    1.7777,
-    FALSE);
-
-    gtk_widget_set_size_request (frame, preview_width, -1);
-    gtk_frame_set_shadow_type (frame,
-    GTK_SHADOW_NONE);
-    gtk_container_add (GTK_CONTAINER (frame), widget);
-
-
-    gtk_widget_show (frame);
-    gtk_container_add (GTK_CONTAINER (flow), frame);
-
-*/
-
   gtk_container_add (GTK_CONTAINER (flow), widget);
-
 
   return flow;
 }
