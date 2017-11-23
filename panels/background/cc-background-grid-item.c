@@ -254,7 +254,7 @@ cc_background_grid_item_init (CcBackgroundGridItem *self)
   g_signal_connect (G_OBJECT (drawing), "draw",
                     G_CALLBACK (on_gallery_item_draw), self);
 
-  gtk_widget_set_size_request (self, 250, 200);
+  gtk_widget_set_size_request (GTK_WIDGET(self), 250, 200);
   gtk_widget_show (drawing);
   gtk_container_add (GTK_CONTAINER (self), drawing);
 }
