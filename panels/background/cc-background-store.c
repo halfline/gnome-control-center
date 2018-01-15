@@ -72,28 +72,11 @@ list_load_cb (GObject *source_object,
 }
 
 static void
-cc_background_store_constructed (GObject *object)
-{
-  CcBackgroundStore *self = CC_BACKGROUND_STORE (object);
-
-  G_OBJECT_CLASS (cc_background_store_parent_class)->constructed (object);
-
-  g_signal_connect (G_OBJECT (self->xml), "added",
-                    G_CALLBACK (item_added), self);
-
-  /* Try adding the default background first */
-  //load_default_bg (self);
-
-  cc_background_xml_load_list_async (self->xml, NULL, list_load_cb, self);
-}
-
-static void
 cc_background_store_class_init (CcBackgroundStoreClass *klass)
 {
   GObjectClass *object_class = G_OBJECT_CLASS (klass);
 
   object_class->dispose = cc_background_store_dispose;
-  object_class->constructed = cc_background_store_constructed;
   object_class->finalize = cc_background_store_finalize;
 }
 
@@ -102,6 +85,14 @@ cc_background_store_init (CcBackgroundStore *self)
 {
   self->model = g_list_store_new (cc_background_item_get_type());
   self->xml = cc_background_xml_new ();
+
+  g_signal_connect (G_OBJECT (self->xml), "added",
+                    G_CALLBACK (item_added), self);
+
+  /* Try adding the default background first */
+  //load_default_bg (self);
+
+  cc_background_xml_load_list_async (self->xml, NULL, list_load_cb, self);
 }
 
 GListStore *
