@@ -149,7 +149,7 @@ CcBackgroundItem * cc_background_grid_item_get_ref (GtkWidget *widget)
   CcBackgroundGridItem *self = (CcBackgroundGridItem *) widget;
   return self->item;
 }
-void
+static void
 cc_background_grid_item_set_ref (GtkWidget        *widget,
                                  CcBackgroundItem *item)
 {
