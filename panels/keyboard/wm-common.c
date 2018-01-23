@@ -76,8 +76,8 @@ char**
 wm_common_get_current_keybindings (void)
 {
   Atom keybindings_atom = XInternAtom (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), "_GNOME_WM_KEYBINDINGS", False);
-  char *keybindings = wm_common_get_window_manager_property (keybindings_atom);
-  char **results;
+  g_autofree char *keybindings = wm_common_get_window_manager_property (keybindings_atom);
+  g_auto(GStrv) results = NULL;
 
   if (keybindings)
     {
@@ -85,21 +85,19 @@ wm_common_get_current_keybindings (void)
       results = g_strsplit(keybindings, ",", -1);
       for (p = results; *p; p++)
 	g_strstrip (*p);
-      g_free (keybindings);
     }
   else
     {
       Atom wm_atom = XInternAtom (GDK_DISPLAY_XDISPLAY (gdk_display_get_default ()), "_NET_WM_NAME", False);
-      char *wm_name = wm_common_get_window_manager_property (wm_atom);
+      g_autofee char *wm_name = wm_common_get_window_manager_property (wm_atom);
       char *to_copy[] = { NULL, NULL };
 
       to_copy[0] = wm_name ? wm_name : WM_COMMON_UNKNOWN;
 
       results = g_strdupv (to_copy);
-      g_free (wm_name);
     }
 
-  return results;
+  return g_steal_pointer (&results);
 }
 
 static void
