@@ -118,7 +118,7 @@ on_gallery_item_draw (GtkWidget            *widget,
                                         new_height,
                                         GDK_INTERP_BILINEAR);
 
-  if (cc_background_item_changes_with_time (cc_background_grid_item_get_ref (gtk_widget_get_parent(widget)))) {
+  if (cc_background_item_changes_with_time (cc_background_grid_item_get_item (gtk_widget_get_parent(widget)))) {
     add_slideshow_emblem (new_pixbuf, (space_width + new_width) / 2, (space_height + new_height)/2, scale_factor);
   }
 
@@ -144,14 +144,15 @@ cc_background_grid_item_new (CcBackgroundItem *item,
                        NULL);
 }
 
-CcBackgroundItem * cc_background_grid_item_get_ref (GtkWidget *widget)
+CcBackgroundItem*
+cc_background_grid_item_get_item (GtkWidget *widget)
 {
   CcBackgroundGridItem *self = (CcBackgroundGridItem *) widget;
   return self->item;
 }
 static void
-cc_background_grid_item_set_ref (GtkWidget        *widget,
-                                 CcBackgroundItem *item)
+cc_background_grid_item_set_item (GtkWidget        *widget,
+                                  CcBackgroundItem *item)
 {
   CcBackgroundGridItem *self = (CcBackgroundGridItem *) widget;
   self->item = item;

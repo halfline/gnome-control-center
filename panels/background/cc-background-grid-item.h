@@ -33,7 +33,7 @@ G_DECLARE_FINAL_TYPE (CcBackgroundGridItem, cc_background_grid_item, CC, BACKGRO
 
 GtkWidget *             cc_background_grid_item_new             (CcBackgroundItem             *,
                                                                  GdkPixbuf                    *);
-CcBackgroundItem *      cc_background_grid_item_get_ref         (GtkWidget                    *);
+CcBackgroundItem *      cc_background_grid_item_get_item        (GtkWidget                    *);
 
 G_END_DECLS
 

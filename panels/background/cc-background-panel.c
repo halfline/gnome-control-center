@@ -592,7 +592,7 @@ on_background_select (GtkFlowBox      *box,
   GtkWidget *selected = GTK_WIDGET (child);
   CcBackgroundPanel *panel = user_data;
   CcBackgroundItem *item;
-  item = cc_background_grid_item_get_ref (selected);
+  item = cc_background_grid_item_get_item (selected);
 
   set_background (panel, panel->settings, item);
   set_background (panel, panel->lock_settings, item);
