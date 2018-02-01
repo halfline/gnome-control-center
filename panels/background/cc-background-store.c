@@ -95,10 +95,18 @@ cc_background_store_init (CcBackgroundStore *self)
   cc_background_xml_load_list_async (self->xml, NULL, list_load_cb, self);
 }
 
-GListStore *
-cc_background_store_get_liststore (CcBackgroundStore *self) {
-  return self->model;
+void 
+cc_background_store_bind_flow_box (CcBackgroundStore *self,
+                                   gpointer panel,
+                                   GtkWidget *widget,
+                                   GtkFlowBoxCreateWidgetFunc create_widget_fun) {
+  gtk_flow_box_bind_model (GTK_FLOW_BOX (widget),
+                           G_LIST_MODEL(self->model),
+                           create_widget_fun,
+                           panel,
+                           NULL);
 }
+
 
 CcBackgroundStore *
 cc_background_store_new ()
