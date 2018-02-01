@@ -31,7 +31,7 @@ G_BEGIN_DECLS
 
 G_DECLARE_FINAL_TYPE (CcBackgroundGridItem, cc_background_grid_item, CC, BACKGROUND_GRID_LIST, GtkDrawingArea)
 
-GtkDrawingArea         *cc_background_grid_item_new             (CcBackgroundItem             *,
+CcBackgroundGridItem   *cc_background_grid_item_new             (CcBackgroundItem             *,
                                                                  GdkPixbuf                    *);
 CcBackgroundItem       *cc_background_grid_item_get_item        (GtkWidget                    *);
 

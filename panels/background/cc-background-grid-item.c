@@ -133,7 +133,7 @@ on_gallery_item_draw (GtkWidget            *widget,
   return TRUE;
 }
 
-GtkDrawingArea*
+CcBackgroundGridItem *
 cc_background_grid_item_new (CcBackgroundItem *item,
                              GdkPixbuf        *pixbuf)
 {
