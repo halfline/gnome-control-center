@@ -74,8 +74,6 @@ sources = common_sources + files(
   'bg-pictures-source.c',
   'bg-source.c',
   'bg-wallpapers-source.c',
-  'cc-background-chooser-dialog.c',
-  'cc-background-grilo-miner.c',
   'cc-background-item.c',
   'cc-background-xml.c'
 )
@@ -95,14 +93,6 @@ cflags += [
   '-DGNOME_DESKTOP_USE_UNSTABLE_API'
 ]
 
-libbackground_chooser = static_library(
-  cappletname + '-chooser',
-  sources: sources,
-  include_directories: top_inc,
-  dependencies: deps,
-  c_args: cflags
-)
-
 sources = common_sources + files('cc-background-panel.c')
 
 panels_libs += static_library(
@@ -111,16 +101,4 @@ panels_libs += static_library(
   include_directories: top_inc,
   dependencies: deps,
   c_args: cflags,
-  link_with: libbackground_chooser
-)
-
-test_name = 'test-chooser-dialog'
-
-executable(
-  test_name,
-  test_name + '.c',
-  include_directories: top_inc,
-  dependencies: deps,
-  c_args: cflags,
-  link_with: libbackground_chooser
 )
