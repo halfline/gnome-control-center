@@ -59,8 +59,6 @@ common_sources += gnome.mkenums(
   vtail: '      { 0, NULL, NULL }\n    };\n    etype = g_@type@_register_static ("@EnumName@", values);\n  }\n  return etype;\n}\n'
 )
 
-resource_data = files('background.ui')
-
 common_sources += gnome.compile_resources(
   'cc-@0@-resources'.format(cappletname),
   cappletname + '.gresource.xml',
@@ -70,12 +68,13 @@ common_sources += gnome.compile_resources(
 )
 
 sources = common_sources + files(
-  'bg-colors-source.c',
-  'bg-pictures-source.c',
   'bg-source.c',
   'bg-wallpapers-source.c',
   'cc-background-item.c',
-  'cc-background-xml.c'
+  'cc-background-grid-item.c',
+  'cc-background-store.c',
+  'cc-background-xml.c',
+  'cc-background-panel.c'
 )
 
 deps = common_deps + [
@@ -92,8 +91,6 @@ cflags += [
   '-DDATADIR="@0@"'.format(control_center_datadir),
   '-DGNOME_DESKTOP_USE_UNSTABLE_API'
 ]
-
-sources = common_sources + files('cc-background-panel.c')
 
 panels_libs += static_library(
   cappletname,
