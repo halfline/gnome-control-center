@@ -399,18 +399,16 @@ on_open_gnome_photos (GtkWidget *widget,
   context = G_APP_LAUNCH_CONTEXT (gdk_display_get_app_launch_context (gdk_display_get_default ()));
   appInfo = g_desktop_app_info_new("org.gnome.Photos.desktop");
 
-  g_object_unref (context);
-
   if (appInfo == NULL) {
     g_debug ("Gnome Photos is not installed.");
   }
   else {
     g_app_info_launch (G_APP_INFO (appInfo), NULL, context, error);
-    g_prefix_error (error,
-                    ("Problem opening Gnome Photos: "));
+    g_prefix_error (error, "Problem opening Gnome Photos: ");
 
     g_object_unref (appInfo);
   }
+  g_object_unref (context);
 }
 
 static void
