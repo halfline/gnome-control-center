@@ -14,7 +14,8 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, see <http://www.gnu.org/licenses/>.
  *
- * Author: Thomas Wood <thomas.wood@intel.com>
+ * Authors: Thomas Wood <thomas.wood@intel.com>
+ *          Julian Sparber <julian@sparber.net>
  *
  */
 
