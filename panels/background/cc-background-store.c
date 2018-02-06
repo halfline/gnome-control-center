@@ -107,7 +107,6 @@ cc_background_store_bind_flow_box (CcBackgroundStore            *self,
                            NULL);
 }
 
-
 CcBackgroundStore *
 cc_background_store_new ()
 {
