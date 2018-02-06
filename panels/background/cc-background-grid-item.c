@@ -49,7 +49,7 @@ static GdkPixbuf *
 load_slideshow_emblem (CcBackgroundGridItem *item,
                        gint                  scale_factor)
 {
-  GdkPixbuf *slideshow_emblem;
+  GdkPixbuf *slideshow_emblem = NULL;
   GIcon *icon = NULL;
   GtkIconInfo *icon_info = NULL;
   GError *error = NULL;
