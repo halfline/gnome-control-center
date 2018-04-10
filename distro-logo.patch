@@ -1,0 +1,99 @@
+From 73be5fcb0764cb8e7bdcbcf3ee06b833078d576a Mon Sep 17 00:00:00 2001
+From: Matthias Clasen <mclasen@redhat.com>
+Date: Sun, 31 Mar 2013 20:28:19 -0400
+Subject: [PATCH] info: Switch around GNOME and distro information
+
+This makes the distribution logo prominent, and puts GNOME version
+information in the small print.
+
+https://bugzilla.gnome.org/show_bug.cgi?id=695691
+---
+ panels/info/cc-info-overview-panel.c |  7 ++-----
+ panels/info/info-overview.ui         | 14 ++++++++------
+ 2 files changed, 10 insertions(+), 11 deletions(-)
+
+diff --git a/panels/info/cc-info-overview-panel.c b/panels/info/cc-info-overview-panel.c
+index 7a5879c6b..ce15e92d0 100644
+--- a/panels/info/cc-info-overview-panel.c
++++ b/panels/info/cc-info-overview-panel.c
+@@ -446,7 +446,7 @@ static char *
+ get_os_name (void)
+ {
+   GHashTable *os_info;
+-  gchar *name, *version_id, *pretty_name, *build_id;
++  gchar *name, *version_id, *build_id;
+   gchar *result = NULL;
+   g_autofree gchar *name_version = NULL;
+ 
+@@ -457,12 +457,9 @@ get_os_name (void)
+ 
+   name = g_hash_table_lookup (os_info, "NAME");
+   version_id = g_hash_table_lookup (os_info, "VERSION_ID");
+-  pretty_name = g_hash_table_lookup (os_info, "PRETTY_NAME");
+   build_id = g_hash_table_lookup (os_info, "BUILD_ID");
+ 
+-  if (pretty_name)
+-    name_version = g_strdup (pretty_name);
+-  else if (name && version_id)
++  if (name && version_id)
+     name_version = g_strdup_printf ("%s %s", name, version_id);
+   else
+     name_version = g_strdup (_("Unknown"));
+diff --git a/panels/info/info-overview.ui b/panels/info/info-overview.ui
+index 219a83c4c..aa87fbec2 100644
+--- a/panels/info/info-overview.ui
++++ b/panels/info/info-overview.ui
+@@ -12,13 +12,14 @@
+       <object class="GtkBox">
+         <property name="visible">True</property>
+         <property name="can_focus">False</property>
+-        <property name="spacing">18</property>
++        <property name="spacing">6</property>
+         <property name="orientation">vertical</property>
+         <child>
+           <object class="GtkImage" id="system_image">
+             <property name="visible">True</property>
+             <property name="can_focus">False</property>
+-            <property name="resource">/org/gnome/control-center/info/GnomeLogoVerticalMedium.svg</property>
++            <property name="pixel_size">128</property>
++            <property name="icon_name">fedora-logo-icon</property>
+           </object>
+           <packing>
+             <property name="expand">False</property>
+@@ -27,11 +28,12 @@
+           </packing>
+         </child>
+         <child>
+-          <object class="GtkLabel" id="version_label">
++          <object class="GtkLabel" id="os_name_label">
+             <property name="visible">True</property>
+             <property name="can_focus">False</property>
+             <property name="label">Version 3.0</property>
+             <property name="selectable">True</property>
++            <property name="margin-bottom">24</property>
+             <attributes>
+               <attribute name="scale" value="1.25"/>
+             </attributes>
+@@ -118,8 +120,8 @@
+                 <property name="visible">True</property>
+                 <property name="can_focus">False</property>
+                 <property name="xalign">1</property>
+-                <property name="label" translatable="yes" comments="To translators: this field contains the distro name and version">OS name</property>
+-                <property name="mnemonic_widget">os_name_label</property>
++                <property name="label">GNOME</property>
++                <property name="mnemonic_widget">version_label</property>
+                 <style>
+                  <class name="dim-label"/>
+                 </style>
+@@ -228,7 +230,7 @@
+               </packing>
+             </child>
+             <child>
+-              <object class="GtkLabel" id="os_name_label">
++              <object class="GtkLabel" id="version_label">
+                 <property name="visible">True</property>
+                 <property name="can_focus">False</property>
+                 <property name="xalign">0</property>
+-- 
+2.13.0
+
