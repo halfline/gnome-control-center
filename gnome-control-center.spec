@@ -118,7 +118,6 @@ Summary: GNOME Control Center directories
 BuildArch: noarch
 # Renamed in F28
 Provides: control-center-filesystem = 1:%{version}-%{release}
-Provides: control-center-filesystem%{?_isa} = 1:%{version}-%{release}
 Obsoletes: control-center-filesystem < 1:%{version}-%{release}
 
 %description filesystem
