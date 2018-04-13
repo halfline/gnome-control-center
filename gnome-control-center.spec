@@ -8,7 +8,7 @@
 
 Name:           gnome-control-center
 Version:        3.28.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Utilities to configure the GNOME desktop
 
 License:        GPLv2+ and CC-BY-SA
@@ -17,6 +17,12 @@ Source0:        https://download.gnome.org/sources/gnome-control-center/3.28/gno
 
 # https://bugzilla.gnome.org/show_bug.cgi?id=695691
 Patch0:         distro-logo.patch
+# thunderbolt panel backported to 3.28.x
+# https://gitlab.gnome.org/gicmo/gnome-control-center/commits/thunderbolt_3_28_1
+Patch1:         0001-shell-Don-t-set-per-panel-icon.patch
+Patch2:         0002-shell-Icon-name-helper-returns-symbolic-name.patch
+Patch3:         0003-thunderbolt-new-panel-for-device-management.patch
+Patch4:         0004-thunderbolt-move-to-the-Devices-page.patch
 
 BuildRequires:  chrpath
 BuildRequires:  cups-devel
@@ -77,6 +83,8 @@ Requires: %{name}-filesystem = %{version}-%{release}
 # For user accounts
 Requires: accountsservice
 Requires: alsa-lib
+# For the thunderbolt panel
+Requires: bolt
 # For the color panel
 Requires: colord
 # For the printers panel
@@ -180,5 +188,8 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
+* Fri Apr 13 2018 Kalev Lember <klember@redhat.com> - 3.28.1-2
+- Backport new thunderbolt panel
+
 * Tue Apr 10 2018 Pete Walter <pwalter@fedoraproject.org> - 3.28.1-1
 - Rename control-center to gnome-control-center
