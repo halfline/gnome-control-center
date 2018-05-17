@@ -4,8 +4,9 @@
 %define gsd_version 3.25.90
 %define gsettings_desktop_schemas_version 3.27.2
 %define gtk3_version 3.22.20
-%define gnome_bluetooth_version 3.18.2
 %define upower_version 0.99.6
+%define cheese_version 3.28.0
+%define gnome_bluetooth_version 3.18.2
 
 Name:           gnome-control-center
 Version:        3.28.1
@@ -33,6 +34,7 @@ BuildRequires:  gettext
 BuildRequires:  libXxf86misc-devel
 BuildRequires:  meson
 BuildRequires:  pkgconfig(accountsservice)
+BuildRequires:  pkgconfig(cheese) >= %{cheese_version}
 BuildRequires:  pkgconfig(cheese-gtk)
 BuildRequires:  pkgconfig(clutter-gtk-1.0)
 BuildRequires:  pkgconfig(colord)
@@ -70,6 +72,7 @@ BuildRequires:  pkgconfig(libwacom)
 %endif
 
 # Versioned library deps
+Requires: cheese-libs%{?_isa} >= %{cheese_version}
 Requires: glib2%{?_isa} >= %{glib2_version}
 Requires: gnome-desktop3%{?_isa} >= %{gnome_desktop_version}
 Requires: gnome-online-accounts%{?_isa} >= %{gnome_online_accounts_version}
