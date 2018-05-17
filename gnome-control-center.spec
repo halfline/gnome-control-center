@@ -5,6 +5,7 @@
 %define gsettings_desktop_schemas_version 3.27.2
 %define gtk3_version 3.22.20
 %define gnome_bluetooth_version 3.18.2
+%define upower_version 0.99.6
 
 Name:           gnome-control-center
 Version:        3.28.1
@@ -60,7 +61,7 @@ BuildRequires:  pkgconfig(mm-glib)
 BuildRequires:  pkgconfig(polkit-gobject-1)
 BuildRequires:  pkgconfig(pwquality)
 BuildRequires:  pkgconfig(smbclient)
-BuildRequires:  pkgconfig(upower-glib)
+BuildRequires:  pkgconfig(upower-glib) >= %{upower_version}
 BuildRequires:  pkgconfig(x11)
 BuildRequires:  pkgconfig(xi)
 %ifnarch s390 s390x
@@ -75,6 +76,7 @@ Requires: gnome-online-accounts%{?_isa} >= %{gnome_online_accounts_version}
 Requires: gnome-settings-daemon%{?_isa} >= %{gsd_version}
 Requires: gsettings-desktop-schemas%{?_isa} >= %{gsettings_desktop_schemas_version}
 Requires: gtk3%{?_isa} >= %{gtk3_version}
+Requires: upower%{?_isa} >= %{upower_version}
 %ifnarch s390 s390x
 Requires: gnome-bluetooth%{?_isa} >= 1:%{gnome_bluetooth_version}
 %endif
