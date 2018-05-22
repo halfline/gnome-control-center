@@ -10,7 +10,7 @@
 
 Name:           gnome-control-center
 Version:        3.28.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Utilities to configure the GNOME desktop
 
 License:        GPLv2+ and CC-BY-SA
@@ -108,9 +108,10 @@ Requires: rygel
 %endif
 # For the info/details panel
 Requires: switcheroo-control
-Requires: vino
 # For the keyboard panel
 Requires: /usr/bin/gkbd-keyboard-display
+
+Recommends: vino
 
 # Renamed in F28
 Provides: control-center = 1:%{version}-%{release}
@@ -193,6 +194,9 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
+* Tue May 22 2018 Ray Strode <rstrode@redhat.com> - 3.28.1-3
+- Change vino requires to a vino recommends
+
 * Fri Apr 13 2018 Kalev Lember <klember@redhat.com> - 3.28.1-2
 - Backport new thunderbolt panel
 
