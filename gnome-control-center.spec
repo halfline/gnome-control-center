@@ -10,7 +10,7 @@
 
 Name:           gnome-control-center
 Version:        3.28.1
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Utilities to configure the GNOME desktop
 
 License:        GPLv2+ and CC-BY-SA
@@ -101,7 +101,7 @@ Requires: glx-utils
 Requires: iso-codes
 # For the network panel
 Requires: nm-connection-editor
-Requires: NetworkManager-wifi
+Recommends: NetworkManager-wifi
 %if 0%{?fedora}
 # For the sharing panel
 Requires: rygel
@@ -194,6 +194,9 @@ chrpath --delete $RPM_BUILD_ROOT%{_bindir}/gnome-control-center
 %dir %{_datadir}/gnome/wm-properties
 
 %changelog
+* Wed May 23 2018 Pete Walter <pwalter@fedoraproject.org> - 3.28.1-4
+- Change NetworkManager-wifi requires to recommends (#1478661)
+
 * Tue May 22 2018 Ray Strode <rstrode@redhat.com> - 3.28.1-3
 - Change vino requires to a vino recommends
 
